@@ -1,0 +1,64 @@
+{
+  "promoted": true,
+  "rolledBack": false,
+  "reason": "all steps within SLO",
+  "analyses": [
+    {
+      "stepPercent": 25,
+      "requests": 188.7342,
+      "errorRate": 0,
+      "p95Seconds": 0.004750000000000001,
+      "verdict": "pass"
+    },
+    {
+      "stepPercent": 25,
+      "requests": 393.36704,
+      "errorRate": 0,
+      "p95Seconds": 0.00475,
+      "verdict": "pass"
+    },
+    {
+      "stepPercent": 25,
+      "requests": 600.2262499999999,
+      "errorRate": 0,
+      "p95Seconds": 0.00475,
+      "verdict": "pass"
+    },
+    {
+      "stepPercent": 25,
+      "requests": 825.8181818181818,
+      "errorRate": 0,
+      "p95Seconds": 0.00475,
+      "verdict": "pass"
+    },
+    {
+      "stepPercent": 50,
+      "requests": 926.1308727272726,
+      "errorRate": 0,
+      "p95Seconds": 0.00475,
+      "verdict": "pass"
+    },
+    {
+      "stepPercent": 50,
+      "requests": 1016.8205963636362,
+      "errorRate": 0,
+      "p95Seconds": 0.004749999999999999,
+      "verdict": "pass"
+    },
+    {
+      "stepPercent": 50,
+      "requests": 1087.1050500000001,
+      "errorRate": 0,
+      "p95Seconds": 0.004750000000000001,
+      "verdict": "pass"
+    },
+    {
+      "stepPercent": 50,
+      "requests": 1209.8181818181818,
+      "errorRate": 0,
+      "p95Seconds": 0.004750000000000001,
+      "verdict": "pass"
+    }
+  ],
+  "duration": "2m6s"
+}

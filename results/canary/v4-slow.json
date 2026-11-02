@@ -1,0 +1,24 @@
+{
+  "promoted": false,
+  "rolledBack": true,
+  "reason": "SLO breach at 25%: p95 488ms \u003e 250ms",
+  "analyses": [
+    {
+      "stepPercent": 25,
+      "requests": 149.79359999999997,
+      "errorRate": 0,
+      "p95Seconds": 0.48749999999999993,
+      "verdict": "breach",
+      "reason": "p95 487ms \u003e 250ms"
+    },
+    {
+      "stepPercent": 25,
+      "requests": 338.6746,
+      "errorRate": 0,
+      "p95Seconds": 0.4875,
+      "verdict": "breach",
+      "reason": "p95 488ms \u003e 250ms"
+    }
+  ],
+  "duration": "32s"
+}

@@ -1,0 +1,10 @@
+[20:45:37] cluster: {"gpusTotal":64,"nodes":8}
+[20:45:49] failure 1: deleting node agent pod nodeagent-a100-57bb5b989d-7d8xz (its nodes stop heartbeating)
+pod "nodeagent-a100-57bb5b989d-7d8xz" deleted
+submitted 150 jobs (0 failed) in 30s
+[20:46:14] failure 2: deleting the scheduler pod (restore from Postgres + Redis redelivery)
+pod "scheduler-7f5d7bbc8-qb9nt" deleted
+Waiting for deployment "scheduler" rollout to finish: 0 of 1 updated replicas are available...
+deployment "scheduler" successfully rolled out
+[20:46:19] scheduler back: {"runningJobs":40,"pendingByClass":{"batch":35,"critical":0,"standard":20}}
+[20:52:13] jobs succeeded=150 not_succeeded=0 preemptions=81 node_failure_requeues=15

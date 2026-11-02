@@ -1,0 +1,42 @@
+{{- range .Values.nodePools }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeagent-{{ .name }}
+  labels: {{- include "gs.labels" $ | nindent 4 }}
+    app: nodeagent
+    pool: {{ .name }}
+spec:
+  replicas: {{ .replicas }}
+  selector: {matchLabels: {app: nodeagent, pool: {{ .name }}}}
+  template:
+    metadata:
+      labels: {app: nodeagent, pool: {{ .name }}}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9100"
+    spec:
+      {{- include "gs.podSecurity" $ | nindent 6 }}
+      containers:
+        - name: agent
+          image: {{ include "gs.image" (dict "root" $ "component" "nodeagent") }}
+          imagePullPolicy: {{ $.Values.image.pullPolicy }}
+          ports: [{name: metrics, containerPort: 9100}]
+          env:
+            - {name: SCHEDULER_URL, value: "http://scheduler:8080"}
+            - name: NODE_PREFIX
+              valueFrom: {fieldRef: {fieldPath: metadata.name}}
+            - {name: NODES, value: {{ .nodesPerReplica | quote }}}
+            - {name: GPUS, value: {{ .gpusPerNode | quote }}}
+            - {name: GPU_TYPE, value: {{ .gpuType | quote }}}
+            - {name: POOL, value: {{ .isolationPool | default "" | quote }}}
+            - {name: HEARTBEAT, value: {{ $.Values.nodeAgent.heartbeat | quote }}}
+            - {name: FAIL_RATE, value: {{ $.Values.nodeAgent.failRate | quote }}}
+            - name: API_TOKEN
+              valueFrom: {secretKeyRef: {name: gpu-scheduler-secrets, key: apiToken}}
+          livenessProbe:
+            httpGet: {path: /healthz, port: metrics}
+          resources: {{- toYaml $.Values.nodeAgent.resources | nindent 12 }}
+          {{- include "gs.containerSecurity" $ | nindent 10 }}
+{{- end }}

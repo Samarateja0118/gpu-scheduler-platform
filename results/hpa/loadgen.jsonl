@@ -1,0 +1,4 @@
+{"achievedQps":30.016666666666666,"byTrack":{"stable/v2":1801},"droppedClientSide":0,"errors":0,"p50ms":1.795,"p95ms":2.83,"p99ms":4.523,"seconds":60,"sent":1801,"step":0,"tStart":4.38e-7,"targetQps":30}
+{"achievedQps":120.0111111111111,"byTrack":{"stable/v2":10801},"droppedClientSide":0,"errors":0,"p50ms":1.557,"p95ms":2.362,"p99ms":3.669,"seconds":90,"sent":10801,"step":1,"tStart":60.00288675,"targetQps":120}
+{"achievedQps":360.00666666666666,"byTrack":{"stable/v2":54001},"droppedClientSide":0,"errors":0,"p50ms":1.605,"p95ms":2.751,"p99ms":4.774,"seconds":150,"sent":54001,"step":2,"tStart":150.00634312,"targetQps":360}
+{"achievedQps":30.006666666666668,"byTrack":{"stable/v2":4500},"droppedClientSide":0,"errors":1,"p50ms":1.886,"p95ms":2.848,"p99ms":4.563,"seconds":150,"sent":4501,"step":3,"tStart":300.014060754,"targetQps":30}

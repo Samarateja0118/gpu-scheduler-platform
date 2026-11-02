@@ -1,0 +1,7 @@
+platform_repo_url: https://github.com/Samarateja0118/gpu-scheduler-platform.git
+platform_repo_dir: /opt/gpu-scheduler-platform
+platform_repo_version: main
+platform_cluster_name: gpusched
+platform_namespace: gpusched
+platform_image_registry: ghcr.io/samarateja0118/gpu-scheduler-platform
+platform_image_tag: latest

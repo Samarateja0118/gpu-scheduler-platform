@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: scheduler-tenants
+  labels: {{- include "gs.labels" . | nindent 4 }}
+data:
+  tenants.json: {{ toJson .Values.scheduler.tenants | quote }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scheduler
+  labels: {{- include "gs.labels" . | nindent 4 }}
+    app: scheduler
+spec:
+  replicas: {{ .Values.scheduler.replicas }}
+  strategy: {type: Recreate}  # never two active schedulers
+  selector: {matchLabels: {app: scheduler}}
+  template:
+    metadata:
+      labels: {app: scheduler}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        checksum/tenants: {{ toJson .Values.scheduler.tenants | sha256sum }}
+    spec:
+      {{- include "gs.podSecurity" . | nindent 6 }}
+      containers:
+        - name: scheduler
+          image: {{ include "gs.image" (dict "root" . "component" "scheduler") }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports: [{name: http, containerPort: 8080}]
+          env:
+            - {name: TENANTS_FILE, value: /etc/gpusched/tenants.json}
+            - {name: NODE_TIMEOUT, value: {{ .Values.scheduler.nodeTimeout | quote }}}
+            - {name: ORDERING, value: {{ .Values.scheduler.policy.ordering | quote }}}
+            - {name: PLACEMENT, value: {{ .Values.scheduler.policy.placement | quote }}}
+            - {name: PREEMPTION, value: {{ .Values.scheduler.policy.preemption | quote }}}
+            - {name: ENFORCE_QUOTA, value: {{ .Values.scheduler.policy.enforceQuota | quote }}}
+            - name: API_TOKEN
+              valueFrom: {secretKeyRef: {name: gpu-scheduler-secrets, key: apiToken}}
+            {{- if .Values.postgres.enabled }}
+            - name: PGPASSWORD
+              valueFrom: {secretKeyRef: {name: gpu-scheduler-secrets, key: postgresPassword}}
+            - {name: DATABASE_URL, value: "postgres://gpusched:$(PGPASSWORD)@postgres:5432/gpusched?sslmode=disable"}
+            {{- end }}
+            {{- if .Values.redis.enabled }}
+            - {name: REDIS_ADDR, value: "redis:6379"}
+            {{- end }}
+          readinessProbe:
+            httpGet: {path: /readyz, port: http}
+            periodSeconds: 5
+          livenessProbe:
+            httpGet: {path: /healthz, port: http}
+            periodSeconds: 10
+            initialDelaySeconds: 10
+          resources: {{- toYaml .Values.scheduler.resources | nindent 12 }}
+          {{- include "gs.containerSecurity" . | nindent 10 }}
+          volumeMounts:
+            - {name: tenants, mountPath: /etc/gpusched}
+      volumes:
+        - name: tenants
+          configMap: {name: scheduler-tenants}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scheduler
+  labels: {{- include "gs.labels" . | nindent 4 }}
+spec:
+  selector: {app: scheduler}
+  ports: [{name: http, port: 8080, targetPort: http}]

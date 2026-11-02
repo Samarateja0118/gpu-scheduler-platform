@@ -1,0 +1,9 @@
+# Provision a Linux host into a single-machine lab for the platform:
+# Docker, kubectl, kind, Helm and OpenTofu, then a kind cluster and the
+# Helm release. Idempotent; safe to re-run.
+- name: Provision GPU scheduler lab host
+  hosts: gpusched
+  become: true
+  roles:
+    - k8s_tools
+    - platform

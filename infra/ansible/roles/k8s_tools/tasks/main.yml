@@ -1,0 +1,70 @@
+- name: Install base packages
+  ansible.builtin.apt:
+    name: [docker.io, jq, curl, unzip, socat, conntrack]
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Enable Docker
+  ansible.builtin.systemd:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Allow the login user to use Docker
+  ansible.builtin.user:
+    name: "{{ ansible_env.SUDO_USER | default(ansible_user_id) }}"
+    groups: docker
+    append: true
+
+- name: Install kubectl
+  ansible.builtin.get_url:
+    url: "https://dl.k8s.io/release/{{ k8s_tools_kubectl_version }}/bin/linux/{{ k8s_tools_arch }}/kubectl"
+    checksum: "sha256:https://dl.k8s.io/release/{{ k8s_tools_kubectl_version }}/bin/linux/{{ k8s_tools_arch }}/kubectl.sha256"
+    dest: "{{ k8s_tools_bin_dir }}/kubectl"
+    mode: "0755"
+
+- name: Install kind
+  ansible.builtin.get_url:
+    url: "{{ k8s_tools_kind_url }}"
+    checksum: "sha256:{{ k8s_tools_kind_url }}.sha256sum"
+    dest: "{{ k8s_tools_bin_dir }}/kind"
+    mode: "0755"
+
+- name: Check installed Helm version
+  ansible.builtin.command: "{{ k8s_tools_bin_dir }}/helm version --short"
+  register: helm_installed
+  changed_when: false
+  failed_when: false
+
+- name: Install Helm
+  when: k8s_tools_helm_version not in (helm_installed.stdout | default(''))
+  block:
+    - name: Download Helm
+      ansible.builtin.unarchive:
+        src: "https://get.helm.sh/helm-{{ k8s_tools_helm_version }}-linux-{{ k8s_tools_arch }}.tar.gz"
+        dest: /tmp
+        remote_src: true
+    - name: Place Helm binary
+      ansible.builtin.copy:
+        src: "/tmp/linux-{{ k8s_tools_arch }}/helm"
+        dest: "{{ k8s_tools_bin_dir }}/helm"
+        mode: "0755"
+        remote_src: true
+
+- name: Install OpenTofu
+  ansible.builtin.unarchive:
+    src: "{{ k8s_tools_tofu_url }}"
+    dest: "{{ k8s_tools_bin_dir }}"
+    remote_src: true
+    include: [tofu]
+    creates: "{{ k8s_tools_bin_dir }}/tofu"
+
+- name: Raise inotify limits (kind runs many kubelets' watchers on one host)
+  ansible.builtin.copy:
+    dest: /etc/sysctl.d/90-kind.conf
+    content: |
+      fs.inotify.max_user_watches = 524288
+      fs.inotify.max_user_instances = 512
+    mode: "0644"
+  notify: Apply sysctl settings

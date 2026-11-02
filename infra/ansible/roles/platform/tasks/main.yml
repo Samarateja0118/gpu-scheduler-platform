@@ -1,0 +1,30 @@
+- name: Check out the platform repository
+  ansible.builtin.git:
+    repo: "{{ platform_repo_url }}"
+    dest: "{{ platform_repo_dir }}"
+    version: "{{ platform_repo_version }}"
+
+- name: List kind clusters
+  ansible.builtin.command: kind get clusters
+  register: kind_clusters
+  changed_when: false
+
+- name: Create kind cluster
+  ansible.builtin.command: "kind create cluster --name {{ platform_cluster_name }} --wait 120s"
+  when: platform_cluster_name not in kind_clusters.stdout_lines
+  changed_when: true
+
+- name: Deploy the Helm chart
+  ansible.builtin.command: >
+    helm upgrade --install gs {{ platform_repo_dir }}/deploy/helm/gpu-scheduler
+    --platform_namespace {{ platform_namespace }} --create-platform_namespace
+    --set image.registry={{ platform_image_registry }} --set image.tag={{ platform_image_tag }}
+    --wait --timeout 10m
+  environment:
+    KUBECONFIG: /root/.kube/config
+  register: helm_out
+  changed_when: "'STATUS: deployed' in helm_out.stdout"
+
+- name: Wait for the scheduler to report ready
+  ansible.builtin.command: "kubectl -n {{ platform_namespace }} rollout status deploy/scheduler --timeout=120s"
+  changed_when: false

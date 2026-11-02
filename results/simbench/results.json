@@ -1,0 +1,4502 @@
+[
+  {
+    "policy": "fifo-firstfit",
+    "seed": 1,
+    "jobs": 3894,
+    "offeredLoad": 0.6669486451995575,
+    "utilization": 0.6594025061320543,
+    "usefulUtilization": 0.6594025061320543,
+    "idleWhileQueuedFrac": 0.011056010873183267,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1096,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.09254447791666667,
+        "p99WaitMin": 18.35373495465,
+        "meanWaitMin": 0.61715782684302,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1718,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.0053461143666666665,
+        "p99WaitMin": 10.60188644575,
+        "meanWaitMin": 0.3406645119133004,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.1808448574,
+        "p99WaitMin": 14.59474668115,
+        "meanWaitMin": 0.5560229313988889,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1853,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.23999268943333332,
+        "meanWaitMin": 0.018428982472674944,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1083,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 10.244713538133333,
+        "meanWaitMin": 0.2552711454373961,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 736,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.828119705533333,
+        "p99WaitMin": 18.001837364766665,
+        "meanWaitMin": 0.9766746130055253,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 222,
+        "p50WaitMin": 0,
+        "p95WaitMin": 27.335132038933335,
+        "p99WaitMin": 53.93757016565,
+        "meanWaitMin": 3.7510419161944437,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7788,
+    "cycleP99Micros": 16,
+    "guaranteeShortfallGpuH": 84.6208911941548
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 2,
+    "jobs": 3997,
+    "offeredLoad": 0.7123336008275403,
+    "utilization": 0.7047582906516561,
+    "usefulUtilization": 0.7047582906516561,
+    "idleWhileQueuedFrac": 0.016967578465815904,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1229,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.6459717406333333,
+        "p99WaitMin": 37.47299569731667,
+        "meanWaitMin": 0.9107433699534854,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1645,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 4.704987959,
+        "meanWaitMin": 0.13480392728181356,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1123,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 19.836187794416666,
+        "meanWaitMin": 0.48644856078130005,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1870,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.010455357375490196,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1090,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 4.704987959,
+        "meanWaitMin": 0.09509007892798164,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 788,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.88484302315,
+        "p99WaitMin": 8.51365577735,
+        "meanWaitMin": 0.37973034063898053,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 249,
+        "p50WaitMin": 0,
+        "p95WaitMin": 40.23801475225,
+        "p99WaitMin": 50.8939549672,
+        "meanWaitMin": 5.883175032376037,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7994,
+    "cycleP99Micros": 17,
+    "guaranteeShortfallGpuH": 91.27679534229533
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 3,
+    "jobs": 3836,
+    "offeredLoad": 0.6762581820075892,
+    "utilization": 0.6654574653761047,
+    "usefulUtilization": 0.6654574653761047,
+    "idleWhileQueuedFrac": 0.012821798645465822,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1091,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 34.6049029503,
+        "meanWaitMin": 0.8906148842184541,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1644,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 10.553820867433334,
+        "meanWaitMin": 0.3445674317421026,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1101,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 24.159609029016668,
+        "meanWaitMin": 0.6214698727801998,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1783,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.020518902043653017,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1068,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 5.838154139716667,
+        "meanWaitMin": 0.19195922769202559,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 745,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.3156677955,
+        "p99WaitMin": 33.63720777616667,
+        "meanWaitMin": 1.0417786345338478,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 240,
+        "p50WaitMin": 0,
+        "p95WaitMin": 41.92618721066667,
+        "p99WaitMin": 64.66372785086666,
+        "meanWaitMin": 5.019355358961319,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7672,
+    "cycleP99Micros": 13,
+    "guaranteeShortfallGpuH": 94.4181353442472
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 4,
+    "jobs": 3943,
+    "offeredLoad": 0.6997735765422858,
+    "utilization": 0.6911377165426577,
+    "usefulUtilization": 0.6911377165426577,
+    "idleWhileQueuedFrac": 0.02181060148635005,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1082,
+        "p50WaitMin": 0,
+        "p95WaitMin": 6.1864604417999995,
+        "p99WaitMin": 35.37909366776667,
+        "meanWaitMin": 1.149633285562939,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1708,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.2439418514166665,
+        "p99WaitMin": 21.086219232816667,
+        "meanWaitMin": 0.7183117354910811,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1153,
+        "p50WaitMin": 0,
+        "p95WaitMin": 8.260579741233334,
+        "p99WaitMin": 27.159971684883335,
+        "meanWaitMin": 1.0862283444020675,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1869,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 3.4956800995166666,
+        "meanWaitMin": 0.09625511781407169,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1041,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.50976248045,
+        "p99WaitMin": 9.992641130433334,
+        "meanWaitMin": 0.35210708063088386,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 780,
+        "p50WaitMin": 0,
+        "p95WaitMin": 15.403693509083332,
+        "p99WaitMin": 32.78381758521667,
+        "meanWaitMin": 2.068352476443996,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 253,
+        "p50WaitMin": 0,
+        "p95WaitMin": 33.448510943083335,
+        "p99WaitMin": 49.95512186171667,
+        "meanWaitMin": 6.179611551525231,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7886,
+    "cycleP99Micros": 19,
+    "guaranteeShortfallGpuH": 133.62295423550796
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 5,
+    "jobs": 3900,
+    "offeredLoad": 0.6954308487028065,
+    "utilization": 0.6929391974203553,
+    "usefulUtilization": 0.6929391974203553,
+    "idleWhileQueuedFrac": 0.02609791014270367,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1126,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.0023628379,
+        "p99WaitMin": 43.3873504819,
+        "meanWaitMin": 1.0552686308313795,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1662,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 3.807863825816667,
+        "meanWaitMin": 0.10895918279123547,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1112,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.30157134725,
+        "p99WaitMin": 21.3168788893,
+        "meanWaitMin": 0.6633442241557554,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1811,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.007711023836701638,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 2.264247188116667,
+        "meanWaitMin": 0.049613138713734566,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 754,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.1411350194166667,
+        "p99WaitMin": 8.352434119083334,
+        "meanWaitMin": 0.36863159999352346,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 255,
+        "p50WaitMin": 0,
+        "p95WaitMin": 50.84675086841666,
+        "p99WaitMin": 59.89175759898333,
+        "meanWaitMin": 6.907711125498626,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7800,
+    "cycleP99Micros": 13,
+    "guaranteeShortfallGpuH": 121.17344625066191
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 1,
+    "jobs": 3894,
+    "offeredLoad": 0.6669486451995575,
+    "utilization": 0.6594025061320545,
+    "usefulUtilization": 0.6594025061320545,
+    "idleWhileQueuedFrac": 0.0272376942275659,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1096,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 34.34839332465,
+        "meanWaitMin": 1.0021763613572232,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1718,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.3840357545,
+        "p99WaitMin": 7.064827483216667,
+        "meanWaitMin": 0.24769748438349826,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.2957362173,
+        "p99WaitMin": 21.722386134316668,
+        "meanWaitMin": 0.7220055607578395,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1853,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 2.3095804612166666,
+        "meanWaitMin": 0.07168652340816695,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1083,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.63465866545,
+        "p99WaitMin": 6.461438715983333,
+        "meanWaitMin": 0.24291630392166821,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 736,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.7624154832166665,
+        "p99WaitMin": 16.790479358983333,
+        "meanWaitMin": 0.8097007694031251,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 222,
+        "p50WaitMin": 0,
+        "p95WaitMin": 44.19792093786667,
+        "p99WaitMin": 75.9409390571,
+        "meanWaitMin": 5.909199660061411,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7788,
+    "cycleP99Micros": 22,
+    "guaranteeShortfallGpuH": 132.24433789876
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 2,
+    "jobs": 3997,
+    "offeredLoad": 0.7123336008275403,
+    "utilization": 0.704758290651657,
+    "usefulUtilization": 0.704758290651657,
+    "idleWhileQueuedFrac": 0.051767715964159744,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1229,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.30261454113333336,
+        "p99WaitMin": 43.82537217765,
+        "meanWaitMin": 1.4578182081847302,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1645,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.6092646500833333,
+        "p99WaitMin": 4.01072056935,
+        "meanWaitMin": 0.14004518563961502,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1123,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.0617553721833333,
+        "p99WaitMin": 12.336990635,
+        "meanWaitMin": 0.6160808712063965,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1870,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.3723075192833334,
+        "meanWaitMin": 0.0348785749518984,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1090,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.2693937765666667,
+        "p99WaitMin": 3.6591540227,
+        "meanWaitMin": 0.13271306802524466,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 788,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.9551700210166665,
+        "p99WaitMin": 7.174047724566667,
+        "meanWaitMin": 0.3916862856607657,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 249,
+        "p50WaitMin": 0,
+        "p95WaitMin": 47.1497641024,
+        "p99WaitMin": 179.96888995095,
+        "meanWaitMin": 8.816717888324229,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7994,
+    "cycleP99Micros": 19,
+    "guaranteeShortfallGpuH": 173.7907780404293
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 3,
+    "jobs": 3836,
+    "offeredLoad": 0.6762581820075892,
+    "utilization": 0.6654574653761085,
+    "usefulUtilization": 0.6654574653761085,
+    "idleWhileQueuedFrac": 0.01549964714226703,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1091,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 34.4546732865,
+        "meanWaitMin": 1.4776717789196607,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1644,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.37459965543333335,
+        "p99WaitMin": 3.7742740733666666,
+        "meanWaitMin": 0.13366224408973035,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1101,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.2820159902,
+        "p99WaitMin": 10.59695724965,
+        "meanWaitMin": 0.3314209833481986,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1783,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.1168042992166667,
+        "meanWaitMin": 0.03505459572940737,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1068,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 4.035441703616667,
+        "meanWaitMin": 0.13128381911690076,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 745,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.786671825,
+        "p99WaitMin": 10.026442896316667,
+        "meanWaitMin": 0.4685526032134675,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 240,
+        "p50WaitMin": 0,
+        "p95WaitMin": 31.35300760655,
+        "p99WaitMin": 168.45505423685,
+        "meanWaitMin": 6.854124959811736,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7672,
+    "cycleP99Micros": 14,
+    "guaranteeShortfallGpuH": 111.80621145152485
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 4,
+    "jobs": 3943,
+    "offeredLoad": 0.6997735765422858,
+    "utilization": 0.6911377165426603,
+    "usefulUtilization": 0.6911377165426603,
+    "idleWhileQueuedFrac": 0.038173398299667635,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1082,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.87923047385,
+        "p99WaitMin": 49.14235134201667,
+        "meanWaitMin": 1.2065550992200553,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1708,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.8400968978833334,
+        "p99WaitMin": 9.27477564005,
+        "meanWaitMin": 0.4501771507314988,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1153,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.1706587248,
+        "p99WaitMin": 39.71882021295,
+        "meanWaitMin": 1.6463380526746167,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1869,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.36984499881666666,
+        "p99WaitMin": 3.7299507635999998,
+        "meanWaitMin": 0.13707619222109863,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1041,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.4564156288,
+        "p99WaitMin": 7.787539822883334,
+        "meanWaitMin": 0.3600220625564041,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 780,
+        "p50WaitMin": 0,
+        "p95WaitMin": 11.292445478533333,
+        "p99WaitMin": 62.83927606578333,
+        "meanWaitMin": 2.2422126245745932,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 253,
+        "p50WaitMin": 0,
+        "p95WaitMin": 49.14235134201667,
+        "p99WaitMin": 74.86422769555,
+        "meanWaitMin": 6.295331019718181,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7886,
+    "cycleP99Micros": 17,
+    "guaranteeShortfallGpuH": 139.38312395580127
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 5,
+    "jobs": 3900,
+    "offeredLoad": 0.6954308487028065,
+    "utilization": 0.6929391974203566,
+    "usefulUtilization": 0.6929391974203566,
+    "idleWhileQueuedFrac": 0.0649404969925476,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1126,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 52.9732629384,
+        "meanWaitMin": 1.6152969222593696,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 1662,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.1373298839833335,
+        "p99WaitMin": 5.199121531366667,
+        "meanWaitMin": 0.20354751875981741,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1112,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.4951128775333333,
+        "p99WaitMin": 28.9766388247,
+        "meanWaitMin": 1.477401895634922,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1811,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 2.0829803007,
+        "meanWaitMin": 0.06358632846114486,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.8695564586333333,
+        "p99WaitMin": 5.929965155066666,
+        "meanWaitMin": 0.22573006598876544,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 754,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.578436852666667,
+        "p99WaitMin": 17.24447725068333,
+        "meanWaitMin": 0.8930149117235411,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 255,
+        "p50WaitMin": 0,
+        "p95WaitMin": 55.831426779033336,
+        "p99WaitMin": 293.9457003335,
+        "meanWaitMin": 10.853782992307254,
+        "preemptions": 0
+      }
+    },
+    "cycles": 7800,
+    "cycleP99Micros": 18,
+    "guaranteeShortfallGpuH": 185.56988429369832
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 1,
+    "jobs": 3894,
+    "offeredLoad": 0.6669486451995575,
+    "utilization": 0.6918858828834247,
+    "usefulUtilization": 0.6594025061320553,
+    "idleWhileQueuedFrac": 0.03246428600764982,
+    "preemptions": 380,
+    "lostGpuHours": 299.3668001406202,
+    "lostFracOfDelivered": 0.048704464706799185,
+    "byClass": {
+      "batch": {
+        "jobs": 1096,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 27.844737848033333,
+        "meanWaitMin": 1.0372616789889906,
+        "preemptions": 61
+      },
+      "critical": {
+        "jobs": 1718,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.023854787025232825,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.4002775208333333,
+        "p99WaitMin": 16.142903603433332,
+        "meanWaitMin": 0.6187050914713426,
+        "preemptions": 319
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1853,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.65931380915,
+        "meanWaitMin": 0.04482520671554236,
+        "preemptions": 108
+      },
+      "2": {
+        "jobs": 1083,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 8.487533689666666,
+        "meanWaitMin": 0.15874739563544163,
+        "preemptions": 114
+      },
+      "4": {
+        "jobs": 736,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.472940077866667,
+        "p99WaitMin": 19.548548903716668,
+        "meanWaitMin": 0.7183479561669612,
+        "preemptions": 122
+      },
+      "8": {
+        "jobs": 222,
+        "p50WaitMin": 0,
+        "p95WaitMin": 25.198991460483334,
+        "p99WaitMin": 102.19635690003334,
+        "meanWaitMin": 4.785289143307958,
+        "preemptions": 36
+      }
+    },
+    "cycles": 8168,
+    "cycleP99Micros": 70,
+    "guaranteeShortfallGpuH": 150.4283399742888
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 2,
+    "jobs": 3997,
+    "offeredLoad": 0.7123336008275403,
+    "utilization": 0.7184525407489634,
+    "usefulUtilization": 0.704758290651657,
+    "idleWhileQueuedFrac": 0.04054657466505332,
+    "preemptions": 240,
+    "lostGpuHours": 126.20620889677495,
+    "lostFracOfDelivered": 0.019224489875807164,
+    "byClass": {
+      "batch": {
+        "jobs": 1229,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.8273598328,
+        "p99WaitMin": 47.8041442221,
+        "meanWaitMin": 1.4778552653178874,
+        "preemptions": 59
+      },
+      "critical": {
+        "jobs": 1645,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.0004244924053394123,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1123,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.1628202445166667,
+        "p99WaitMin": 12.206947492883334,
+        "meanWaitMin": 0.40135759572601676,
+        "preemptions": 181
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1870,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.11345318646666666,
+        "meanWaitMin": 0.023375867816229946,
+        "preemptions": 30
+      },
+      "2": {
+        "jobs": 1090,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 5.18151716375,
+        "meanWaitMin": 0.11348634927964833,
+        "preemptions": 74
+      },
+      "4": {
+        "jobs": 788,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 13.989969472616666,
+        "meanWaitMin": 0.3666280255093274,
+        "preemptions": 102
+      },
+      "8": {
+        "jobs": 249,
+        "p50WaitMin": 0,
+        "p95WaitMin": 47.8041442221,
+        "p99WaitMin": 97.32242675461667,
+        "meanWaitMin": 7.2746631062259715,
+        "preemptions": 34
+      }
+    },
+    "cycles": 8234,
+    "cycleP99Micros": 42,
+    "guaranteeShortfallGpuH": 157.46958541199567
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 3,
+    "jobs": 3836,
+    "offeredLoad": 0.6762581820075892,
+    "utilization": 0.6803352143725666,
+    "usefulUtilization": 0.6654574653761082,
+    "idleWhileQueuedFrac": 0.019486472786511153,
+    "preemptions": 204,
+    "lostGpuHours": 137.11333475136033,
+    "lostFracOfDelivered": 0.022000102020638332,
+    "byClass": {
+      "batch": {
+        "jobs": 1091,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.64311625575,
+        "p99WaitMin": 49.399033867233335,
+        "meanWaitMin": 1.367047260486679,
+        "preemptions": 47
+      },
+      "critical": {
+        "jobs": 1644,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.004567688219332928,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1101,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 5.544791729,
+        "meanWaitMin": 0.22128832326592496,
+        "preemptions": 157
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1783,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.005175139216666667,
+        "meanWaitMin": 0.02148204388824079,
+        "preemptions": 34
+      },
+      "2": {
+        "jobs": 1068,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.17298554376666667,
+        "meanWaitMin": 0.048863602169444444,
+        "preemptions": 41
+      },
+      "4": {
+        "jobs": 745,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 14.2378060848,
+        "meanWaitMin": 0.33440648889373603,
+        "preemptions": 98
+      },
+      "8": {
+        "jobs": 240,
+        "p50WaitMin": 0,
+        "p95WaitMin": 43.45723666156667,
+        "p99WaitMin": 89.09181936456666,
+        "meanWaitMin": 5.845727662265833,
+        "preemptions": 31
+      }
+    },
+    "cycles": 7876,
+    "cycleP99Micros": 44,
+    "guaranteeShortfallGpuH": 124.9854775776556
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 4,
+    "jobs": 3943,
+    "offeredLoad": 0.6997735765422858,
+    "utilization": 0.7216107832038592,
+    "usefulUtilization": 0.6911377165426602,
+    "idleWhileQueuedFrac": 0.052570495625890466,
+    "preemptions": 488,
+    "lostGpuHours": 280.8397823496101,
+    "lostFracOfDelivered": 0.04354703818879848,
+    "byClass": {
+      "batch": {
+        "jobs": 1082,
+        "p50WaitMin": 0,
+        "p95WaitMin": 16.359354241433333,
+        "p99WaitMin": 95.53464552208334,
+        "meanWaitMin": 3.6933373815121535,
+        "preemptions": 82
+      },
+      "critical": {
+        "jobs": 1708,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.0343527808638954,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1153,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.48879360775,
+        "p99WaitMin": 50.41424148748333,
+        "meanWaitMin": 1.634022024667765,
+        "preemptions": 406
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1869,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.5149355261166666,
+        "meanWaitMin": 0.04233728539214376,
+        "preemptions": 92
+      },
+      "2": {
+        "jobs": 1041,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.3196537862666667,
+        "p99WaitMin": 8.137738221866666,
+        "meanWaitMin": 0.24188371360943003,
+        "preemptions": 137
+      },
+      "4": {
+        "jobs": 780,
+        "p50WaitMin": 0,
+        "p95WaitMin": 12.041403216816667,
+        "p99WaitMin": 54.021697830566666,
+        "meanWaitMin": 2.2205934315131626,
+        "preemptions": 210
+      },
+      "8": {
+        "jobs": 253,
+        "p50WaitMin": 0,
+        "p95WaitMin": 90.5451837249,
+        "p99WaitMin": 129.67322838066667,
+        "meanWaitMin": 15.319765937185837,
+        "preemptions": 49
+      }
+    },
+    "cycles": 8374,
+    "cycleP99Micros": 78,
+    "guaranteeShortfallGpuH": 301.02282068421647
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 5,
+    "jobs": 3900,
+    "offeredLoad": 0.6954308487028065,
+    "utilization": 0.7096078726647117,
+    "usefulUtilization": 0.6929391974203569,
+    "idleWhileQueuedFrac": 0.02103825605077708,
+    "preemptions": 288,
+    "lostGpuHours": 153.6185110519738,
+    "lostFracOfDelivered": 0.02396884647186277,
+    "byClass": {
+      "batch": {
+        "jobs": 1126,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 34.16813738258333,
+        "meanWaitMin": 0.9235743258056396,
+        "preemptions": 50
+      },
+      "critical": {
+        "jobs": 1662,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.00040673791356799036,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1112,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.3815303047166667,
+        "p99WaitMin": 18.1194483656,
+        "meanWaitMin": 0.6838760525261841,
+        "preemptions": 238
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1811,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.6135851328166667,
+        "meanWaitMin": 0.03298912618683048,
+        "preemptions": 35
+      },
+      "2": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 10.26133546585,
+        "meanWaitMin": 0.22476870162395063,
+        "preemptions": 94
+      },
+      "4": {
+        "jobs": 754,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.8206835707666666,
+        "p99WaitMin": 18.00912724165,
+        "meanWaitMin": 0.48233945683969937,
+        "preemptions": 146
+      },
+      "8": {
+        "jobs": 255,
+        "p50WaitMin": 0,
+        "p95WaitMin": 35.676546190016666,
+        "p99WaitMin": 90.15014264195,
+        "meanWaitMin": 4.450640799777517,
+        "preemptions": 13
+      }
+    },
+    "cycles": 8088,
+    "cycleP99Micros": 50,
+    "guaranteeShortfallGpuH": 70.99845809846457
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 1,
+    "jobs": 3894,
+    "offeredLoad": 0.6669486451995575,
+    "utilization": 0.7067930483493261,
+    "usefulUtilization": 0.6533404351063035,
+    "idleWhileQueuedFrac": 0.13605647803711488,
+    "preemptions": 541,
+    "lostGpuHours": 492.61928364769716,
+    "lostFracOfDelivered": 0.08014502110133105,
+    "byClass": {
+      "batch": {
+        "jobs": 1096,
+        "p50WaitMin": 0,
+        "p95WaitMin": 25.751673377016665,
+        "p99WaitMin": 101.55982595813333,
+        "meanWaitMin": 3.6945473200620276,
+        "preemptions": 130
+      },
+      "critical": {
+        "jobs": 1718,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.013972685745120296,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 9.3991524137,
+        "p99WaitMin": 18.815504958116666,
+        "meanWaitMin": 1.0120942008669442,
+        "preemptions": 411
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1853,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.5313815171666667,
+        "meanWaitMin": 0.0663888207343497,
+        "preemptions": 126
+      },
+      "2": {
+        "jobs": 1083,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 8.860303855516667,
+        "meanWaitMin": 0.16865976931520466,
+        "preemptions": 136
+      },
+      "4": {
+        "jobs": 736,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.289767440883334,
+        "p99WaitMin": 20.1054286593,
+        "meanWaitMin": 0.8862043064730978,
+        "preemptions": 197
+      },
+      "8": {
+        "jobs": 222,
+        "p50WaitMin": 4.249890596883334,
+        "p95WaitMin": 101.03470419273333,
+        "p99WaitMin": 121.10746228228334,
+        "meanWaitMin": 18.95660941117605,
+        "preemptions": 82
+      }
+    },
+    "cycles": 8329,
+    "cycleP99Micros": 82,
+    "guaranteeShortfallGpuH": 470.0729431946741
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 2,
+    "jobs": 3997,
+    "offeredLoad": 0.7123336008275403,
+    "utilization": 0.7506187389656174,
+    "usefulUtilization": 0.69952461135608,
+    "idleWhileQueuedFrac": 0.15826378107399416,
+    "preemptions": 561,
+    "lostGpuHours": 470.88348004949603,
+    "lostFracOfDelivered": 0.07172780779985624,
+    "byClass": {
+      "batch": {
+        "jobs": 1229,
+        "p50WaitMin": 0,
+        "p95WaitMin": 40.13997963958333,
+        "p99WaitMin": 119.68218987206667,
+        "meanWaitMin": 6.197592580854855,
+        "preemptions": 189
+      },
+      "critical": {
+        "jobs": 1645,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.006848182170050659,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1123,
+        "p50WaitMin": 0,
+        "p95WaitMin": 6.678329220166667,
+        "p99WaitMin": 24.229498482833332,
+        "meanWaitMin": 1.0688071682995546,
+        "preemptions": 372
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1870,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.055795880316666664,
+        "meanWaitMin": 0.046415008374313727,
+        "preemptions": 79
+      },
+      "2": {
+        "jobs": 1090,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 2.733857845366667,
+        "meanWaitMin": 0.0875912641525994,
+        "preemptions": 145
+      },
+      "4": {
+        "jobs": 788,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.6802446632666665,
+        "p99WaitMin": 21.377959381683333,
+        "meanWaitMin": 0.8961409735298008,
+        "preemptions": 227
+      },
+      "8": {
+        "jobs": 249,
+        "p50WaitMin": 7.864389345,
+        "p95WaitMin": 119.68218987206667,
+        "p99WaitMin": 288.6899918961,
+        "meanWaitMin": 31.887338798445654,
+        "preemptions": 110
+      }
+    },
+    "cycles": 8555,
+    "cycleP99Micros": 91,
+    "guaranteeShortfallGpuH": 513.1116787679305
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 3,
+    "jobs": 3836,
+    "offeredLoad": 0.6762581820075892,
+    "utilization": 0.7377177837814012,
+    "usefulUtilization": 0.6596874808531052,
+    "idleWhileQueuedFrac": 0.16787019122452226,
+    "preemptions": 379,
+    "lostGpuHours": 719.1272717871763,
+    "lostFracOfDelivered": 0.11538537352206164,
+    "byClass": {
+      "batch": {
+        "jobs": 1091,
+        "p50WaitMin": 0,
+        "p95WaitMin": 84.23971168251667,
+        "p99WaitMin": 204.94924700393332,
+        "meanWaitMin": 10.296486542448745,
+        "preemptions": 157
+      },
+      "critical": {
+        "jobs": 1644,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.004766275870894161,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1101,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.49011759065,
+        "p99WaitMin": 21.007835299683332,
+        "meanWaitMin": 0.5831904962008174,
+        "preemptions": 222
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1783,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.020712036830043,
+        "preemptions": 64
+      },
+      "2": {
+        "jobs": 1068,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.5436148237666667,
+        "meanWaitMin": 0.05116200297361111,
+        "preemptions": 81
+      },
+      "4": {
+        "jobs": 745,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.437047877,
+        "p99WaitMin": 31.598197285216667,
+        "meanWaitMin": 0.8407537389718569,
+        "preemptions": 115
+      },
+      "8": {
+        "jobs": 240,
+        "p50WaitMin": 4.575930152983333,
+        "p95WaitMin": 177.98654554515,
+        "p99WaitMin": 376.34449193703335,
+        "meanWaitMin": 46.522763313677565,
+        "preemptions": 119
+      }
+    },
+    "cycles": 8051,
+    "cycleP99Micros": 65,
+    "guaranteeShortfallGpuH": 604.9890804574593
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 4,
+    "jobs": 3943,
+    "offeredLoad": 0.6997735765422858,
+    "utilization": 0.7414670527604259,
+    "usefulUtilization": 0.6901176459107803,
+    "idleWhileQueuedFrac": 0.12833170255739834,
+    "preemptions": 697,
+    "lostGpuHours": 473.23613352633316,
+    "lostFracOfDelivered": 0.07338003115718188,
+    "byClass": {
+      "batch": {
+        "jobs": 1082,
+        "p50WaitMin": 0,
+        "p95WaitMin": 56.000221008266664,
+        "p99WaitMin": 112.5489920101,
+        "meanWaitMin": 6.557189995176263,
+        "preemptions": 172
+      },
+      "critical": {
+        "jobs": 1708,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.02400072527076503,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1153,
+        "p50WaitMin": 0,
+        "p95WaitMin": 14.2065957039,
+        "p99WaitMin": 54.975972939583336,
+        "meanWaitMin": 2.3550752919689364,
+        "preemptions": 525
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1869,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0.7264798350333334,
+        "meanWaitMin": 0.044745828364981276,
+        "preemptions": 133
+      },
+      "2": {
+        "jobs": 1041,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.3633762777,
+        "p99WaitMin": 10.137675499016666,
+        "meanWaitMin": 0.2699578083322767,
+        "preemptions": 152
+      },
+      "4": {
+        "jobs": 780,
+        "p50WaitMin": 0,
+        "p95WaitMin": 20.691795715083334,
+        "p99WaitMin": 60.29313895438333,
+        "meanWaitMin": 2.622153570207777,
+        "preemptions": 315
+      },
+      "8": {
+        "jobs": 253,
+        "p50WaitMin": 10.39350684145,
+        "p95WaitMin": 105.27368987633334,
+        "p99WaitMin": 135.8493817507,
+        "meanWaitMin": 29.41240635862944,
+        "preemptions": 97
+      }
+    },
+    "cycles": 8583,
+    "cycleP99Micros": 105,
+    "guaranteeShortfallGpuH": 564.9735223932506
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 5,
+    "jobs": 3900,
+    "offeredLoad": 0.6954308487028065,
+    "utilization": 0.7292342714417527,
+    "usefulUtilization": 0.689425786297265,
+    "idleWhileQueuedFrac": 0.16844436867467158,
+    "preemptions": 485,
+    "lostGpuHours": 366.8749990915972,
+    "lostFracOfDelivered": 0.05724290951248808,
+    "byClass": {
+      "batch": {
+        "jobs": 1126,
+        "p50WaitMin": 0,
+        "p95WaitMin": 43.9134924981,
+        "p99WaitMin": 173.12082693983334,
+        "meanWaitMin": 7.427129883836871,
+        "preemptions": 145
+      },
+      "critical": {
+        "jobs": 1662,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 0,
+        "meanWaitMin": 0.006451497148746491,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1112,
+        "p50WaitMin": 0,
+        "p95WaitMin": 10.980968070116667,
+        "p99WaitMin": 37.6855308915,
+        "meanWaitMin": 1.6602053549950841,
+        "preemptions": 340
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 1811,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.5106380538500002,
+        "meanWaitMin": 0.046767560168166765,
+        "preemptions": 77
+      },
+      "2": {
+        "jobs": 1080,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 11.4442734614,
+        "meanWaitMin": 0.21708981874719135,
+        "preemptions": 126
+      },
+      "4": {
+        "jobs": 754,
+        "p50WaitMin": 0,
+        "p95WaitMin": 8.066025745333333,
+        "p99WaitMin": 28.274945562716667,
+        "meanWaitMin": 1.1402892986400972,
+        "preemptions": 187
+      },
+      "8": {
+        "jobs": 255,
+        "p50WaitMin": 8.629059419516667,
+        "p95WaitMin": 172.49187923355,
+        "p99WaitMin": 307.3962665424,
+        "meanWaitMin": 35.45446198168596,
+        "preemptions": 95
+      }
+    },
+    "cycles": 8285,
+    "cycleP99Micros": 99,
+    "guaranteeShortfallGpuH": 623.2995410467989
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 1,
+    "jobs": 4686,
+    "offeredLoad": 0.8163715003811355,
+    "utilization": 0.8060994318575232,
+    "usefulUtilization": 0.8060994318575232,
+    "idleWhileQueuedFrac": 0.04071664298169675,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1391,
+        "p50WaitMin": 0,
+        "p95WaitMin": 31.7141227011,
+        "p99WaitMin": 95.25113557553334,
+        "meanWaitMin": 4.936147854107509,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2043,
+        "p50WaitMin": 0,
+        "p95WaitMin": 11.456177929633334,
+        "p99WaitMin": 20.73816319085,
+        "meanWaitMin": 1.548935831782991,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1252,
+        "p50WaitMin": 0,
+        "p95WaitMin": 20.30384531665,
+        "p99WaitMin": 80.05382994375,
+        "meanWaitMin": 3.9684402597064565,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2268,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.7944810786166667,
+        "p99WaitMin": 9.68230963375,
+        "meanWaitMin": 0.42616222685288074,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1270,
+        "p50WaitMin": 0,
+        "p95WaitMin": 9.71284524125,
+        "p99WaitMin": 15.033779083933334,
+        "meanWaitMin": 1.2068168707455904,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 866,
+        "p50WaitMin": 0,
+        "p95WaitMin": 19.891109793016668,
+        "p99WaitMin": 27.451968989733334,
+        "meanWaitMin": 4.23929700165387,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 282,
+        "p50WaitMin": 17.07752899455,
+        "p95WaitMin": 104.81930136008333,
+        "p99WaitMin": 142.34099136361667,
+        "meanWaitMin": 31.307518492082256,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9372,
+    "cycleP99Micros": 23,
+    "guaranteeShortfallGpuH": 494.5038695490239
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 2,
+    "jobs": 4766,
+    "offeredLoad": 0.863166472402626,
+    "utilization": 0.8524737737287875,
+    "usefulUtilization": 0.8524737737287875,
+    "idleWhileQueuedFrac": 0.04227824253527232,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1429,
+        "p50WaitMin": 0,
+        "p95WaitMin": 43.8610472051,
+        "p99WaitMin": 108.806164445,
+        "meanWaitMin": 6.809673355939656,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2006,
+        "p50WaitMin": 0,
+        "p95WaitMin": 29.34962692485,
+        "p99WaitMin": 53.33097915126667,
+        "meanWaitMin": 4.429797371126142,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1331,
+        "p50WaitMin": 0,
+        "p95WaitMin": 45.647436124916666,
+        "p99WaitMin": 111.91179278446667,
+        "meanWaitMin": 8.399939928802333,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2201,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.725093334216667,
+        "p99WaitMin": 20.497959759,
+        "meanWaitMin": 1.0230863621167574,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1343,
+        "p50WaitMin": 0,
+        "p95WaitMin": 23.783843958,
+        "p99WaitMin": 31.3355791105,
+        "meanWaitMin": 3.8788651811762342,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 918,
+        "p50WaitMin": 1.1332103319666667,
+        "p95WaitMin": 51.72404943145,
+        "p99WaitMin": 66.75487090078333,
+        "meanWaitMin": 11.89257842785012,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 304,
+        "p50WaitMin": 23.501499214633334,
+        "p95WaitMin": 128.66151516436668,
+        "p99WaitMin": 162.91708452503335,
+        "meanWaitMin": 37.56250256331459,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9532,
+    "cycleP99Micros": 33,
+    "guaranteeShortfallGpuH": 428.0823920435314
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 3,
+    "jobs": 4713,
+    "offeredLoad": 0.8246846527297506,
+    "utilization": 0.8152802421867792,
+    "usefulUtilization": 0.8152802421867792,
+    "idleWhileQueuedFrac": 0.032142943596381646,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1370,
+        "p50WaitMin": 0,
+        "p95WaitMin": 38.25187483453333,
+        "p99WaitMin": 92.67253404155,
+        "meanWaitMin": 5.938150936482532,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2033,
+        "p50WaitMin": 0,
+        "p95WaitMin": 23.009183988783334,
+        "p99WaitMin": 58.44904260801667,
+        "meanWaitMin": 3.106312076996583,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1310,
+        "p50WaitMin": 0,
+        "p95WaitMin": 31.76176432785,
+        "p99WaitMin": 98.37605868095,
+        "meanWaitMin": 5.625518891987556,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2207,
+        "p50WaitMin": 0,
+        "p95WaitMin": 6.7151120256666665,
+        "p99WaitMin": 27.12658382758333,
+        "meanWaitMin": 1.1869829257847455,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 14.499120961133332,
+        "p99WaitMin": 28.559699640116666,
+        "meanWaitMin": 1.8456286919833584,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 906,
+        "p50WaitMin": 0,
+        "p95WaitMin": 49.33185807993333,
+        "p99WaitMin": 74.31660030701667,
+        "meanWaitMin": 7.727297808489462,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 297,
+        "p50WaitMin": 16.462876290183335,
+        "p95WaitMin": 127.6205402733,
+        "p99WaitMin": 193.66728499341667,
+        "meanWaitMin": 32.97768237934719,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9426,
+    "cycleP99Micros": 26,
+    "guaranteeShortfallGpuH": 377.92092105885763
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 4,
+    "jobs": 4680,
+    "offeredLoad": 0.8172081338407745,
+    "utilization": 0.8082389567640802,
+    "usefulUtilization": 0.8082389567640802,
+    "idleWhileQueuedFrac": 0.03275775005178618,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1369,
+        "p50WaitMin": 0,
+        "p95WaitMin": 25.431251509550002,
+        "p99WaitMin": 215.0984104493,
+        "meanWaitMin": 6.838761328803384,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2032,
+        "p50WaitMin": 0,
+        "p95WaitMin": 13.869752690283333,
+        "p99WaitMin": 44.72518009415,
+        "meanWaitMin": 2.1315615187462273,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1279,
+        "p50WaitMin": 0,
+        "p95WaitMin": 26.756195916766668,
+        "p99WaitMin": 142.34106595901667,
+        "meanWaitMin": 5.408816237466786,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2219,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.2845548907166666,
+        "p99WaitMin": 10.126812568166667,
+        "meanWaitMin": 0.5038902649196408,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1257,
+        "p50WaitMin": 0,
+        "p95WaitMin": 11.094644143566667,
+        "p99WaitMin": 26.756195916766668,
+        "meanWaitMin": 1.4938721665241181,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 919,
+        "p50WaitMin": 0,
+        "p95WaitMin": 42.772164791816664,
+        "p99WaitMin": 56.02202579186667,
+        "meanWaitMin": 6.728598431471636,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 285,
+        "p50WaitMin": 1.0085504042166666,
+        "p95WaitMin": 234.96550247541666,
+        "p99WaitMin": 272.95070226393335,
+        "meanWaitMin": 40.11214548506754,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9360,
+    "cycleP99Micros": 24,
+    "guaranteeShortfallGpuH": 402.17167725034
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 5,
+    "jobs": 4827,
+    "offeredLoad": 0.8362553778515213,
+    "utilization": 0.8318613767196282,
+    "usefulUtilization": 0.8318613767196282,
+    "idleWhileQueuedFrac": 0.040184881774326026,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1483,
+        "p50WaitMin": 0,
+        "p95WaitMin": 39.46578833518333,
+        "p99WaitMin": 144.9987620759,
+        "meanWaitMin": 6.396124543509938,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2020,
+        "p50WaitMin": 0,
+        "p95WaitMin": 8.522636415966666,
+        "p99WaitMin": 19.0824508,
+        "meanWaitMin": 1.2266657268755603,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1324,
+        "p50WaitMin": 0,
+        "p95WaitMin": 20.309090233233334,
+        "p99WaitMin": 108.2161557598,
+        "meanWaitMin": 4.350244204808534,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.14067248755,
+        "p99WaitMin": 4.125689978216666,
+        "meanWaitMin": 0.22699683923128527,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1298,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.920353564766667,
+        "p99WaitMin": 9.431133797533333,
+        "meanWaitMin": 0.7791096257441835,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 945,
+        "p50WaitMin": 0,
+        "p95WaitMin": 19.513666583566668,
+        "p99WaitMin": 29.751493429183334,
+        "meanWaitMin": 4.5969391945197335,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 281,
+        "p50WaitMin": 18.23442499425,
+        "p95WaitMin": 146.39507278763332,
+        "p99WaitMin": 174.09711397396666,
+        "meanWaitMin": 42.15258092417659,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9654,
+    "cycleP99Micros": 26,
+    "guaranteeShortfallGpuH": 422.8761071008572
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 1,
+    "jobs": 4686,
+    "offeredLoad": 0.8163715003811355,
+    "utilization": 0.806095564099346,
+    "usefulUtilization": 0.806095564099346,
+    "idleWhileQueuedFrac": 0.06613208838071497,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1391,
+        "p50WaitMin": 0,
+        "p95WaitMin": 80.99226461998333,
+        "p99WaitMin": 210.1109962518,
+        "meanWaitMin": 10.00565196175138,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2043,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.412841358083333,
+        "p99WaitMin": 12.668832044683333,
+        "meanWaitMin": 0.7638262363703787,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1252,
+        "p50WaitMin": 0,
+        "p95WaitMin": 18.14883126413333,
+        "p99WaitMin": 67.65007635008334,
+        "meanWaitMin": 3.0580167237152174,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2268,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.3802019308,
+        "p99WaitMin": 4.176551576683333,
+        "meanWaitMin": 0.2267674683843841,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1270,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.456029392316666,
+        "p99WaitMin": 16.56425075756667,
+        "meanWaitMin": 0.8603365223883461,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 866,
+        "p50WaitMin": 0,
+        "p95WaitMin": 18.68638306395,
+        "p99WaitMin": 53.47968162301667,
+        "meanWaitMin": 3.498693634780178,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 282,
+        "p50WaitMin": 12.890956992266666,
+        "p95WaitMin": 202.93767847355,
+        "p99WaitMin": 274.59019874195,
+        "meanWaitMin": 52.02195435582867,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9372,
+    "cycleP99Micros": 35,
+    "guaranteeShortfallGpuH": 580.9415533856865
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 2,
+    "jobs": 4766,
+    "offeredLoad": 0.863166472402626,
+    "utilization": 0.8524737737287924,
+    "usefulUtilization": 0.8524737737287924,
+    "idleWhileQueuedFrac": 0.06673150950116616,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1429,
+        "p50WaitMin": 0,
+        "p95WaitMin": 95.28543189948333,
+        "p99WaitMin": 450.5722636005833,
+        "meanWaitMin": 18.622562627467143,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2006,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.1276574366,
+        "p99WaitMin": 11.1185842908,
+        "meanWaitMin": 0.8267937430849539,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1331,
+        "p50WaitMin": 0,
+        "p95WaitMin": 27.070006570016666,
+        "p99WaitMin": 96.60950827951666,
+        "meanWaitMin": 4.917821683363649,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2201,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.4310269810666667,
+        "p99WaitMin": 6.782435155983333,
+        "meanWaitMin": 0.28360208227838857,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1343,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.553604182383333,
+        "p99WaitMin": 17.170141699666665,
+        "meanWaitMin": 1.1977654681677834,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 918,
+        "p50WaitMin": 0,
+        "p95WaitMin": 23.834753002316667,
+        "p99WaitMin": 84.97789637751667,
+        "meanWaitMin": 4.833502448470116,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 304,
+        "p50WaitMin": 27.82425616035,
+        "p95WaitMin": 450.0099015998,
+        "p99WaitMin": 538.5992867854833,
+        "meanWaitMin": 92.58502779373798,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9532,
+    "cycleP99Micros": 38,
+    "guaranteeShortfallGpuH": 621.7067471936024
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 3,
+    "jobs": 4713,
+    "offeredLoad": 0.8246846527297506,
+    "utilization": 0.8153691266658476,
+    "usefulUtilization": 0.8153691266658476,
+    "idleWhileQueuedFrac": 0.05574585133210524,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1370,
+        "p50WaitMin": 0,
+        "p95WaitMin": 108.19195541,
+        "p99WaitMin": 357.31857657288333,
+        "meanWaitMin": 15.005216276471476,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2033,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.9644674871666665,
+        "p99WaitMin": 10.575100911533333,
+        "meanWaitMin": 0.6347603951583206,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1310,
+        "p50WaitMin": 0,
+        "p95WaitMin": 15.5515263125,
+        "p99WaitMin": 41.84386794135,
+        "meanWaitMin": 2.508957535046285,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2207,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.3561991972833334,
+        "p99WaitMin": 5.479571053466667,
+        "meanWaitMin": 0.24132029873483613,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.368748891083333,
+        "p99WaitMin": 17.910524773533332,
+        "meanWaitMin": 0.8230232733051036,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 906,
+        "p50WaitMin": 0,
+        "p95WaitMin": 13.8125364309,
+        "p99WaitMin": 39.305561280233334,
+        "meanWaitMin": 2.868480043905297,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 297,
+        "p50WaitMin": 21.836607397516666,
+        "p95WaitMin": 354.63550299993335,
+        "p99WaitMin": 461.2663808215833,
+        "meanWaitMin": 70.47310575363935,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9426,
+    "cycleP99Micros": 28,
+    "guaranteeShortfallGpuH": 525.0248656050782
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 4,
+    "jobs": 4680,
+    "offeredLoad": 0.8172081338407745,
+    "utilization": 0.8082329319298881,
+    "usefulUtilization": 0.8082329319298881,
+    "idleWhileQueuedFrac": 0.0470408596694678,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1369,
+        "p50WaitMin": 0,
+        "p95WaitMin": 21.18138630745,
+        "p99WaitMin": 286.3810435073,
+        "meanWaitMin": 9.451844887852449,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2032,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.7343971793833335,
+        "p99WaitMin": 27.849460747966667,
+        "meanWaitMin": 1.395494889793455,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1279,
+        "p50WaitMin": 0,
+        "p95WaitMin": 36.224983798383334,
+        "p99WaitMin": 173.662780371,
+        "meanWaitMin": 6.822066885271579,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2219,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.4991475235166667,
+        "p99WaitMin": 10.50112226695,
+        "meanWaitMin": 0.4423592565745682,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1257,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.8010985458,
+        "p99WaitMin": 30.309857594833332,
+        "meanWaitMin": 1.456456561584527,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 919,
+        "p50WaitMin": 0,
+        "p95WaitMin": 36.99005388166667,
+        "p99WaitMin": 192.9838574442,
+        "meanWaitMin": 8.582563221048677,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 285,
+        "p50WaitMin": 0,
+        "p95WaitMin": 270.86679014258334,
+        "p99WaitMin": 441.5793210014,
+        "meanWaitMin": 48.42423903648492,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9360,
+    "cycleP99Micros": 31,
+    "guaranteeShortfallGpuH": 419.7333523468153
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 5,
+    "jobs": 4827,
+    "offeredLoad": 0.8362553778515213,
+    "utilization": 0.8318613767196308,
+    "usefulUtilization": 0.8318613767196308,
+    "idleWhileQueuedFrac": 0.07205446478158935,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1483,
+        "p50WaitMin": 0,
+        "p95WaitMin": 103.9033061765,
+        "p99WaitMin": 306.6710586860833,
+        "meanWaitMin": 15.051564557141269,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2020,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.34957725375,
+        "p99WaitMin": 8.412224959483334,
+        "meanWaitMin": 0.49433653688422446,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1324,
+        "p50WaitMin": 0,
+        "p95WaitMin": 13.861679222816667,
+        "p99WaitMin": 43.956455789766665,
+        "meanWaitMin": 2.2222089283218285,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.41662760045,
+        "p99WaitMin": 3.1600694996,
+        "meanWaitMin": 0.12147171265340137,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1298,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.1642787095166667,
+        "p99WaitMin": 9.596365022133334,
+        "meanWaitMin": 0.4888731943793401,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 945,
+        "p50WaitMin": 0,
+        "p95WaitMin": 14.2033442365,
+        "p99WaitMin": 29.888434410533332,
+        "meanWaitMin": 2.5566553827335627,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 281,
+        "p50WaitMin": 21.233935526116667,
+        "p95WaitMin": 306.6710586860833,
+        "p99WaitMin": 372.17528580693335,
+        "meanWaitMin": 81.60814436518274,
+        "preemptions": 0
+      }
+    },
+    "cycles": 9654,
+    "cycleP99Micros": 34,
+    "guaranteeShortfallGpuH": 548.2467537426135
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 1,
+    "jobs": 4686,
+    "offeredLoad": 0.8163715003811355,
+    "utilization": 0.8663967894388603,
+    "usefulUtilization": 0.8039789791130424,
+    "idleWhileQueuedFrac": 0.05179200375385028,
+    "preemptions": 1363,
+    "lostGpuHours": 575.2425399627379,
+    "lostFracOfDelivered": 0.07645760575507254,
+    "byClass": {
+      "batch": {
+        "jobs": 1391,
+        "p50WaitMin": 0,
+        "p95WaitMin": 92.41742085226667,
+        "p99WaitMin": 222.44088374745,
+        "meanWaitMin": 12.034285174232696,
+        "preemptions": 235
+      },
+      "critical": {
+        "jobs": 2043,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 2.4649919742833335,
+        "meanWaitMin": 0.08229319523589493,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1252,
+        "p50WaitMin": 0,
+        "p95WaitMin": 31.730113545216668,
+        "p99WaitMin": 71.7970829489,
+        "meanWaitMin": 5.198491512361011,
+        "preemptions": 1128
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2268,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.31713138603333335,
+        "p99WaitMin": 10.425549367633334,
+        "meanWaitMin": 0.318389675248927,
+        "preemptions": 352
+      },
+      "2": {
+        "jobs": 1270,
+        "p50WaitMin": 0,
+        "p95WaitMin": 9.624619226316666,
+        "p99WaitMin": 32.049070726016666,
+        "meanWaitMin": 1.273195426275341,
+        "preemptions": 478
+      },
+      "4": {
+        "jobs": 866,
+        "p50WaitMin": 0,
+        "p95WaitMin": 41.05816609875,
+        "p99WaitMin": 72.47486897721667,
+        "meanWaitMin": 4.69707378003778,
+        "preemptions": 436
+      },
+      "8": {
+        "jobs": 282,
+        "p50WaitMin": 11.579367268316666,
+        "p95WaitMin": 225.03327182863333,
+        "p99WaitMin": 475.0506771404333,
+        "meanWaitMin": 60.31771340550932,
+        "preemptions": 97
+      }
+    },
+    "cycles": 10735,
+    "cycleP99Micros": 189,
+    "guaranteeShortfallGpuH": 553.9534550070296
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 2,
+    "jobs": 4766,
+    "offeredLoad": 0.863166472402626,
+    "utilization": 0.9082730689027135,
+    "usefulUtilization": 0.8383118055916055,
+    "idleWhileQueuedFrac": 0.07647568221050954,
+    "preemptions": 1298,
+    "lostGpuHours": 645.1961072513823,
+    "lostFracOfDelivered": 0.08110632236494242,
+    "byClass": {
+      "batch": {
+        "jobs": 1429,
+        "p50WaitMin": 0,
+        "p95WaitMin": 150.93592049863332,
+        "p99WaitMin": 436.0483180203833,
+        "meanWaitMin": 20.337770034340537,
+        "preemptions": 324
+      },
+      "critical": {
+        "jobs": 2006,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 3.3225996285333332,
+        "meanWaitMin": 0.08428010510913923,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1331,
+        "p50WaitMin": 0,
+        "p95WaitMin": 45.01403553105,
+        "p99WaitMin": 108.58393253126667,
+        "meanWaitMin": 6.432788463985963,
+        "preemptions": 974
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2201,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 5.4957060241,
+        "meanWaitMin": 0.15387079143131913,
+        "preemptions": 256
+      },
+      "2": {
+        "jobs": 1343,
+        "p50WaitMin": 0,
+        "p95WaitMin": 6.328439794366667,
+        "p99WaitMin": 33.07140214695,
+        "meanWaitMin": 1.1408599925396623,
+        "preemptions": 414
+      },
+      "4": {
+        "jobs": 918,
+        "p50WaitMin": 0,
+        "p95WaitMin": 51.0800727436,
+        "p99WaitMin": 106.01867043716666,
+        "meanWaitMin": 6.109411249821533,
+        "preemptions": 476
+      },
+      "8": {
+        "jobs": 304,
+        "p50WaitMin": 24.4048217638,
+        "p95WaitMin": 435.4422425304833,
+        "p99WaitMin": 658.4918964124666,
+        "meanWaitMin": 99.71873883628162,
+        "preemptions": 152
+      }
+    },
+    "cycles": 10830,
+    "cycleP99Micros": 182,
+    "guaranteeShortfallGpuH": 505.15439560271125
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 3,
+    "jobs": 4713,
+    "offeredLoad": 0.8246846527297506,
+    "utilization": 0.8731142889267953,
+    "usefulUtilization": 0.8120317073157977,
+    "idleWhileQueuedFrac": 0.061053789702901096,
+    "preemptions": 1193,
+    "lostGpuHours": 562.9370721269554,
+    "lostFracOfDelivered": 0.07406780447388117,
+    "byClass": {
+      "batch": {
+        "jobs": 1370,
+        "p50WaitMin": 0,
+        "p95WaitMin": 146.7005305337,
+        "p99WaitMin": 407.30218554348335,
+        "meanWaitMin": 20.13463009192074,
+        "preemptions": 273
+      },
+      "critical": {
+        "jobs": 2033,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.2395678523666667,
+        "meanWaitMin": 0.03936253368874406,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1310,
+        "p50WaitMin": 0,
+        "p95WaitMin": 21.801899189783335,
+        "p99WaitMin": 70.19814996748333,
+        "meanWaitMin": 3.5576332830903055,
+        "preemptions": 920
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2207,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.04155329951666667,
+        "p99WaitMin": 7.13673202835,
+        "meanWaitMin": 0.20167238407843982,
+        "preemptions": 264
+      },
+      "2": {
+        "jobs": 1303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.163047140983333,
+        "p99WaitMin": 19.695163088316665,
+        "meanWaitMin": 0.83767077291957,
+        "preemptions": 334
+      },
+      "4": {
+        "jobs": 906,
+        "p50WaitMin": 0,
+        "p95WaitMin": 30.141403840516666,
+        "p99WaitMin": 78.10216190456667,
+        "meanWaitMin": 4.277702160711977,
+        "preemptions": 458
+      },
+      "8": {
+        "jobs": 297,
+        "p50WaitMin": 18.8865489722,
+        "p95WaitMin": 406.5712662008167,
+        "p99WaitMin": 523.2474221104667,
+        "meanWaitMin": 90.61546374204903,
+        "preemptions": 137
+      }
+    },
+    "cycles": 10619,
+    "cycleP99Micros": 180,
+    "guaranteeShortfallGpuH": 471.1752173241463
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 4,
+    "jobs": 4680,
+    "offeredLoad": 0.8172081338407745,
+    "utilization": 0.8466255881774649,
+    "usefulUtilization": 0.8081688433699616,
+    "idleWhileQueuedFrac": 0.05050137733706012,
+    "preemptions": 1178,
+    "lostGpuHours": 354.4173601459503,
+    "lostFracOfDelivered": 0.04705869069946901,
+    "byClass": {
+      "batch": {
+        "jobs": 1369,
+        "p50WaitMin": 0,
+        "p95WaitMin": 58.377391295766664,
+        "p99WaitMin": 294.5063428891833,
+        "meanWaitMin": 11.488038404876319,
+        "preemptions": 232
+      },
+      "critical": {
+        "jobs": 2032,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 10.43844331,
+        "meanWaitMin": 0.2970902893135745,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1279,
+        "p50WaitMin": 0,
+        "p95WaitMin": 51.58392484393333,
+        "p99WaitMin": 91.21130877761667,
+        "meanWaitMin": 6.771259687892065,
+        "preemptions": 946
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2219,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.32738090075,
+        "p99WaitMin": 23.728971954216668,
+        "meanWaitMin": 0.7281659206887113,
+        "preemptions": 367
+      },
+      "2": {
+        "jobs": 1257,
+        "p50WaitMin": 0,
+        "p95WaitMin": 8.629100732766666,
+        "p99WaitMin": 61.12226667301667,
+        "meanWaitMin": 2.072233342108791,
+        "preemptions": 384
+      },
+      "4": {
+        "jobs": 919,
+        "p50WaitMin": 0,
+        "p95WaitMin": 44.02786713108333,
+        "p99WaitMin": 100.25424947531667,
+        "meanWaitMin": 6.588928629175533,
+        "preemptions": 350
+      },
+      "8": {
+        "jobs": 285,
+        "p50WaitMin": 0.34424183193333335,
+        "p95WaitMin": 293.0996682381167,
+        "p99WaitMin": 708.0587208586334,
+        "meanWaitMin": 51.63308872183685,
+        "preemptions": 77
+      }
+    },
+    "cycles": 10538,
+    "cycleP99Micros": 183,
+    "guaranteeShortfallGpuH": 467.46559223504016
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 5,
+    "jobs": 4827,
+    "offeredLoad": 0.8362553778515213,
+    "utilization": 0.8908849382234383,
+    "usefulUtilization": 0.8259685518008625,
+    "idleWhileQueuedFrac": 0.07286654939523365,
+    "preemptions": 1195,
+    "lostGpuHours": 598.2694172704589,
+    "lostFracOfDelivered": 0.07762746661116464,
+    "byClass": {
+      "batch": {
+        "jobs": 1483,
+        "p50WaitMin": 0,
+        "p95WaitMin": 175.00744743128334,
+        "p99WaitMin": 538.3315652498,
+        "meanWaitMin": 27.57951447986519,
+        "preemptions": 295
+      },
+      "critical": {
+        "jobs": 2020,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.6251824717,
+        "meanWaitMin": 0.045609529834397686,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1324,
+        "p50WaitMin": 0,
+        "p95WaitMin": 25.7213008337,
+        "p99WaitMin": 59.3281255645,
+        "meanWaitMin": 3.9183490091746744,
+        "preemptions": 900
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 5.138274690366667,
+        "meanWaitMin": 0.15178857698223333,
+        "preemptions": 222
+      },
+      "2": {
+        "jobs": 1298,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.211209017583333,
+        "p99WaitMin": 16.309259094383332,
+        "meanWaitMin": 0.7487318068062533,
+        "preemptions": 366
+      },
+      "4": {
+        "jobs": 945,
+        "p50WaitMin": 0,
+        "p95WaitMin": 26.156862528583332,
+        "p99WaitMin": 71.78524223978333,
+        "meanWaitMin": 3.931017509046527,
+        "preemptions": 468
+      },
+      "8": {
+        "jobs": 281,
+        "p50WaitMin": 49.66515591858333,
+        "p95WaitMin": 538.3315652498,
+        "p99WaitMin": 763.5517814625666,
+        "meanWaitMin": 146.4206789607803,
+        "preemptions": 139
+      }
+    },
+    "cycles": 10849,
+    "cycleP99Micros": 193,
+    "guaranteeShortfallGpuH": 517.4193800126114
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 1,
+    "jobs": 4686,
+    "offeredLoad": 0.8163715003811355,
+    "utilization": 0.8607792580301734,
+    "usefulUtilization": 0.7911307798377426,
+    "idleWhileQueuedFrac": 0.12915498347112975,
+    "preemptions": 1417,
+    "lostGpuHours": 641.8803750214419,
+    "lostFracOfDelivered": 0.08531468597313148,
+    "byClass": {
+      "batch": {
+        "jobs": 1391,
+        "p50WaitMin": 0,
+        "p95WaitMin": 429.5025399973,
+        "p99WaitMin": 682.2318386731666,
+        "meanWaitMin": 46.50648998637321,
+        "preemptions": 313
+      },
+      "critical": {
+        "jobs": 2043,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 2.5355972267333335,
+        "meanWaitMin": 0.07366285126286506,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1252,
+        "p50WaitMin": 0,
+        "p95WaitMin": 31.6381075375,
+        "p99WaitMin": 63.77521012601667,
+        "meanWaitMin": 4.644430587851811,
+        "preemptions": 1104
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2268,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 10.165054047966667,
+        "meanWaitMin": 0.21619656831606407,
+        "preemptions": 334
+      },
+      "2": {
+        "jobs": 1270,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.468456984,
+        "p99WaitMin": 20.303204535966668,
+        "meanWaitMin": 0.741243149649777,
+        "preemptions": 416
+      },
+      "4": {
+        "jobs": 866,
+        "p50WaitMin": 0,
+        "p95WaitMin": 38.71445667641667,
+        "p99WaitMin": 64.73906547875,
+        "meanWaitMin": 5.0042507446114115,
+        "preemptions": 515
+      },
+      "8": {
+        "jobs": 282,
+        "p50WaitMin": 152.36936603503332,
+        "p95WaitMin": 667.3345547299333,
+        "p99WaitMin": 790.0257920447833,
+        "meanWaitMin": 230.10799329906416,
+        "preemptions": 152
+      }
+    },
+    "cycles": 10789,
+    "cycleP99Micros": 206,
+    "guaranteeShortfallGpuH": 918.2483595346814
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 2,
+    "jobs": 4766,
+    "offeredLoad": 0.863166472402626,
+    "utilization": 0.8931664551382172,
+    "usefulUtilization": 0.7951187922755748,
+    "idleWhileQueuedFrac": 0.1015942168076565,
+    "preemptions": 1584,
+    "lostGpuHours": 905.6312423098314,
+    "lostFracOfDelivered": 0.11384510640564949,
+    "byClass": {
+      "batch": {
+        "jobs": 1429,
+        "p50WaitMin": 0,
+        "p95WaitMin": 374.9772922085,
+        "p99WaitMin": 1549.9951460508332,
+        "meanWaitMin": 61.271145607184685,
+        "preemptions": 422
+      },
+      "critical": {
+        "jobs": 2006,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 4.40159747845,
+        "meanWaitMin": 0.13611160018873378,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1331,
+        "p50WaitMin": 0,
+        "p95WaitMin": 42.4655344031,
+        "p99WaitMin": 102.10071149048333,
+        "meanWaitMin": 6.842716737667631,
+        "preemptions": 1162
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2201,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 7.4288081761,
+        "meanWaitMin": 0.173776733994139,
+        "preemptions": 305
+      },
+      "2": {
+        "jobs": 1343,
+        "p50WaitMin": 0,
+        "p95WaitMin": 6.797320931733333,
+        "p99WaitMin": 38.1090450583,
+        "meanWaitMin": 1.253219364496277,
+        "preemptions": 435
+      },
+      "4": {
+        "jobs": 918,
+        "p50WaitMin": 0,
+        "p95WaitMin": 74.23101658016667,
+        "p99WaitMin": 111.06005179926666,
+        "meanWaitMin": 8.83521903563858,
+        "preemptions": 675
+      },
+      "8": {
+        "jobs": 304,
+        "p50WaitMin": 50.45091512476667,
+        "p95WaitMin": 1469.4076526142833,
+        "p99WaitMin": 1971.18629444745,
+        "meanWaitMin": 285.39761726225436,
+        "preemptions": 169
+      }
+    },
+    "cycles": 11116,
+    "cycleP99Micros": 267,
+    "guaranteeShortfallGpuH": 600.916220005027
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 3,
+    "jobs": 4713,
+    "offeredLoad": 0.8246846527297506,
+    "utilization": 0.8731923313210053,
+    "usefulUtilization": 0.8008959945502778,
+    "idleWhileQueuedFrac": 0.11365616114327771,
+    "preemptions": 1407,
+    "lostGpuHours": 666.2830396790248,
+    "lostFracOfDelivered": 0.08766543251583833,
+    "byClass": {
+      "batch": {
+        "jobs": 1370,
+        "p50WaitMin": 0,
+        "p95WaitMin": 444.82617441966664,
+        "p99WaitMin": 782.773349132,
+        "meanWaitMin": 53.04588164269149,
+        "preemptions": 365
+      },
+      "critical": {
+        "jobs": 2033,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.3978694065666666,
+        "meanWaitMin": 0.037530863777627474,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1310,
+        "p50WaitMin": 0,
+        "p95WaitMin": 24.594735964433333,
+        "p99WaitMin": 60.08582020431667,
+        "meanWaitMin": 3.6635452823977217,
+        "preemptions": 1042
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2207,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 8.4378622128,
+        "meanWaitMin": 0.22263879064010725,
+        "preemptions": 316
+      },
+      "2": {
+        "jobs": 1303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 7.283362478633333,
+        "p99WaitMin": 26.512239293116668,
+        "meanWaitMin": 1.077830570229125,
+        "preemptions": 420
+      },
+      "4": {
+        "jobs": 906,
+        "p50WaitMin": 0,
+        "p95WaitMin": 23.261399029733333,
+        "p99WaitMin": 62.50089232371667,
+        "meanWaitMin": 3.7797346119684514,
+        "preemptions": 493
+      },
+      "8": {
+        "jobs": 297,
+        "p50WaitMin": 128.43542191836667,
+        "p95WaitMin": 781.9114709297166,
+        "p99WaitMin": 869.6608831992,
+        "meanWaitMin": 243.19254482859796,
+        "preemptions": 178
+      }
+    },
+    "cycles": 10833,
+    "cycleP99Micros": 198,
+    "guaranteeShortfallGpuH": 732.9078080636899
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 4,
+    "jobs": 4680,
+    "offeredLoad": 0.8172081338407745,
+    "utilization": 0.8544994503222596,
+    "usefulUtilization": 0.7861243498448353,
+    "idleWhileQueuedFrac": 0.12423477504425658,
+    "preemptions": 1422,
+    "lostGpuHours": 630.1449259999425,
+    "lostFracOfDelivered": 0.08366913843119747,
+    "byClass": {
+      "batch": {
+        "jobs": 1369,
+        "p50WaitMin": 0,
+        "p95WaitMin": 252.49329418786667,
+        "p99WaitMin": 415.0024718697,
+        "meanWaitMin": 27.82037865552334,
+        "preemptions": 312
+      },
+      "critical": {
+        "jobs": 2032,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.25327098235,
+        "p99WaitMin": 5.74671388515,
+        "meanWaitMin": 0.19738097448136485,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1279,
+        "p50WaitMin": 0,
+        "p95WaitMin": 58.795171464216665,
+        "p99WaitMin": 95.17481307708333,
+        "meanWaitMin": 7.861697677903689,
+        "preemptions": 1110
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2219,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.3955491803833333,
+        "p99WaitMin": 22.833917469716667,
+        "meanWaitMin": 0.7370224003455461,
+        "preemptions": 399
+      },
+      "2": {
+        "jobs": 1257,
+        "p50WaitMin": 0,
+        "p95WaitMin": 9.8841626575,
+        "p99WaitMin": 64.7071291921,
+        "meanWaitMin": 2.2370767776640545,
+        "preemptions": 396
+      },
+      "4": {
+        "jobs": 919,
+        "p50WaitMin": 0,
+        "p95WaitMin": 51.81308504536667,
+        "p99WaitMin": 100.45784045578333,
+        "meanWaitMin": 7.572456110751706,
+        "preemptions": 470
+      },
+      "8": {
+        "jobs": 285,
+        "p50WaitMin": 66.89939015328333,
+        "p95WaitMin": 413.73522809535,
+        "p99WaitMin": 449.76197288338335,
+        "meanWaitMin": 130.30085076464945,
+        "preemptions": 157
+      }
+    },
+    "cycles": 10782,
+    "cycleP99Micros": 206,
+    "guaranteeShortfallGpuH": 838.9605766055761
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 5,
+    "jobs": 4827,
+    "offeredLoad": 0.8362553778515213,
+    "utilization": 0.874831069556614,
+    "usefulUtilization": 0.7942572910801888,
+    "idleWhileQueuedFrac": 0.10792867691521213,
+    "preemptions": 1546,
+    "lostGpuHours": 742.5779470555643,
+    "lostFracOfDelivered": 0.09635198311529895,
+    "byClass": {
+      "batch": {
+        "jobs": 1483,
+        "p50WaitMin": 0,
+        "p95WaitMin": 380.39233003531666,
+        "p99WaitMin": 921.9333994623,
+        "meanWaitMin": 46.397266667838196,
+        "preemptions": 396
+      },
+      "critical": {
+        "jobs": 2020,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 1.5952984083833335,
+        "meanWaitMin": 0.04997836007074258,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1324,
+        "p50WaitMin": 0,
+        "p95WaitMin": 28.38907548141667,
+        "p99WaitMin": 54.43210258973333,
+        "meanWaitMin": 4.330136414829596,
+        "preemptions": 1150
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2303,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0,
+        "p99WaitMin": 5.648813363733334,
+        "meanWaitMin": 0.1697730232027718,
+        "preemptions": 329
+      },
+      "2": {
+        "jobs": 1298,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.015377317466666,
+        "p99WaitMin": 20.267947022366666,
+        "meanWaitMin": 0.751439048715665,
+        "preemptions": 390
+      },
+      "4": {
+        "jobs": 945,
+        "p50WaitMin": 0,
+        "p95WaitMin": 35.17248707216667,
+        "p99WaitMin": 69.2977119937,
+        "meanWaitMin": 5.149958912486015,
+        "preemptions": 663
+      },
+      "8": {
+        "jobs": 281,
+        "p50WaitMin": 114.30172592618334,
+        "p95WaitMin": 921.9333994623,
+        "p99WaitMin": 1261.3136498022666,
+        "meanWaitMin": 243.44532754097196,
+        "preemptions": 164
+      }
+    },
+    "cycles": 11200,
+    "cycleP99Micros": 255,
+    "guaranteeShortfallGpuH": 675.5196943508261
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 1,
+    "jobs": 5631,
+    "offeredLoad": 0.9881171184758182,
+    "utilization": 0.9447204942399821,
+    "usefulUtilization": 0.9447204942399821,
+    "idleWhileQueuedFrac": 0.040383873508595146,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1657,
+        "p50WaitMin": 1.0025212338,
+        "p95WaitMin": 336.2187900133,
+        "p99WaitMin": 562.5213589094,
+        "meanWaitMin": 44.9585200665393,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2426,
+        "p50WaitMin": 1.44582252825,
+        "p95WaitMin": 56.995370202083336,
+        "p99WaitMin": 75.46239406241666,
+        "meanWaitMin": 11.787010746641144,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1548,
+        "p50WaitMin": 2.567813543583333,
+        "p95WaitMin": 227.83280717393333,
+        "p99WaitMin": 520.9497643057333,
+        "meanWaitMin": 35.2019886359147,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2672,
+        "p50WaitMin": 0,
+        "p95WaitMin": 33.86901645621667,
+        "p99WaitMin": 61.259526156233335,
+        "meanWaitMin": 5.378756458155793,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1543,
+        "p50WaitMin": 1.1177692493333333,
+        "p95WaitMin": 55.64566231565,
+        "p99WaitMin": 68.33865203805,
+        "meanWaitMin": 10.915120506855889,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1083,
+        "p50WaitMin": 22.06132890335,
+        "p95WaitMin": 79.80536014803333,
+        "p99WaitMin": 92.50922231426667,
+        "meanWaitMin": 27.7992062899888,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 273.9047194889,
+        "p95WaitMin": 588.2132193470833,
+        "p99WaitMin": 618.0469504024834,
+        "meanWaitMin": 289.07995681583844,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11262,
+    "cycleP99Micros": 76,
+    "guaranteeShortfallGpuH": 1086.9444360314756
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 2,
+    "jobs": 5700,
+    "offeredLoad": 0.9853671108838249,
+    "utilization": 0.9685114357687318,
+    "usefulUtilization": 0.9685114357687318,
+    "idleWhileQueuedFrac": 0.024743500928092316,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1666,
+        "p50WaitMin": 13.947235941816666,
+        "p95WaitMin": 327.05477763635,
+        "p99WaitMin": 517.5419825990666,
+        "meanWaitMin": 74.49698377972827,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2390,
+        "p50WaitMin": 18.804358765666667,
+        "p95WaitMin": 185.97808518511667,
+        "p99WaitMin": 294.95673002278335,
+        "meanWaitMin": 54.62135797464719,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1644,
+        "p50WaitMin": 22.25179788035,
+        "p95WaitMin": 296.39256514145,
+        "p99WaitMin": 501.98521460615,
+        "meanWaitMin": 75.14839378629563,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2639,
+        "p50WaitMin": 4.19268977545,
+        "p95WaitMin": 149.04533920346665,
+        "p99WaitMin": 172.43355703243333,
+        "meanWaitMin": 27.7042657469685,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1599,
+        "p50WaitMin": 21.377630001283332,
+        "p95WaitMin": 175.2277169699,
+        "p99WaitMin": 185.84595196175,
+        "meanWaitMin": 49.9269431178998,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1129,
+        "p50WaitMin": 82.44166139068334,
+        "p95WaitMin": 288.86789461585,
+        "p99WaitMin": 313.8767514812667,
+        "meanWaitMin": 106.70629136917785,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 302.8499691887667,
+        "p95WaitMin": 554.9448794307333,
+        "p99WaitMin": 598.6134656326833,
+        "meanWaitMin": 314.66918202261445,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11400,
+    "cycleP99Micros": 224,
+    "guaranteeShortfallGpuH": 1101.2572183385782
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 3,
+    "jobs": 5587,
+    "offeredLoad": 0.9842632009152018,
+    "utilization": 0.9697788004797661,
+    "usefulUtilization": 0.9697788004797661,
+    "idleWhileQueuedFrac": 0.02301186179917905,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1632,
+        "p50WaitMin": 11.563538930683332,
+        "p95WaitMin": 417.6237483190667,
+        "p99WaitMin": 482.28455011485,
+        "meanWaitMin": 79.73786729109067,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2451,
+        "p50WaitMin": 10.2724314516,
+        "p95WaitMin": 237.28970102693333,
+        "p99WaitMin": 278.90437442253335,
+        "meanWaitMin": 43.32774944366328,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1504,
+        "p50WaitMin": 14.472514842666667,
+        "p95WaitMin": 368.33875313526664,
+        "p99WaitMin": 487.12522078535,
+        "meanWaitMin": 79.53100272233976,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2560,
+        "p50WaitMin": 1.5155860412666666,
+        "p95WaitMin": 58.82268949423333,
+        "p99WaitMin": 70.23625662228334,
+        "meanWaitMin": 13.819822934601797,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1608,
+        "p50WaitMin": 9.808728480583333,
+        "p95WaitMin": 203.7866582571,
+        "p99WaitMin": 214.96647857258333,
+        "meanWaitMin": 45.29142550248839,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1064,
+        "p50WaitMin": 71.35933078965,
+        "p95WaitMin": 276.72150333518334,
+        "p99WaitMin": 295.04575174958336,
+        "meanWaitMin": 112.7060738165807,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 355,
+        "p50WaitMin": 383.90971787831666,
+        "p95WaitMin": 499.76315970888334,
+        "p99WaitMin": 543.6820415338333,
+        "meanWaitMin": 360.0465350378987,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11174,
+    "cycleP99Micros": 209,
+    "guaranteeShortfallGpuH": 1021.7625262945731
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 4,
+    "jobs": 5635,
+    "offeredLoad": 1.013058087296147,
+    "utilization": 0.9644582297753613,
+    "usefulUtilization": 0.9644582297753613,
+    "idleWhileQueuedFrac": 0.027280385558633144,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1696,
+        "p50WaitMin": 18.255937108,
+        "p95WaitMin": 339.90152218518335,
+        "p99WaitMin": 418.47777749191664,
+        "meanWaitMin": 63.904738182833746,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2363,
+        "p50WaitMin": 21.536067405866667,
+        "p95WaitMin": 168.04765697873333,
+        "p99WaitMin": 286.40292936898334,
+        "meanWaitMin": 41.039553740882226,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1576,
+        "p50WaitMin": 29.610759470766666,
+        "p95WaitMin": 300.9809148117167,
+        "p99WaitMin": 421.4781395829,
+        "meanWaitMin": 64.14458738960042,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2646,
+        "p50WaitMin": 6.206872882183333,
+        "p95WaitMin": 61.93933376061667,
+        "p99WaitMin": 77.44406390895,
+        "meanWaitMin": 17.326559861860005,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1515,
+        "p50WaitMin": 22.5538009561,
+        "p95WaitMin": 102.0671419221,
+        "p99WaitMin": 111.68606857221667,
+        "meanWaitMin": 31.80525977370033,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1109,
+        "p50WaitMin": 79.92609662013334,
+        "p95WaitMin": 277.14600696766666,
+        "p99WaitMin": 302.5213721126833,
+        "meanWaitMin": 102.1008276431725,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 365,
+        "p50WaitMin": 298.9133676017,
+        "p95WaitMin": 455.12125019288334,
+        "p99WaitMin": 498.8527885527167,
+        "meanWaitMin": 271.7531708654385,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11270,
+    "cycleP99Micros": 143,
+    "guaranteeShortfallGpuH": 924.7681582693098
+  },
+  {
+    "policy": "fifo-firstfit",
+    "seed": 5,
+    "jobs": 5593,
+    "offeredLoad": 0.9897373776263757,
+    "utilization": 0.9593596166152657,
+    "usefulUtilization": 0.9593596166152657,
+    "idleWhileQueuedFrac": 0.02781642093147883,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1656,
+        "p50WaitMin": 6.559691104266666,
+        "p95WaitMin": 212.97291886123332,
+        "p99WaitMin": 293.84318498693335,
+        "meanWaitMin": 35.369537218745876,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2379,
+        "p50WaitMin": 7.727891476316667,
+        "p95WaitMin": 65.87768579025,
+        "p99WaitMin": 94.31274412181666,
+        "meanWaitMin": 16.767008439970347,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1558,
+        "p50WaitMin": 11.33111715805,
+        "p95WaitMin": 132.14823391068333,
+        "p99WaitMin": 273.4823070497333,
+        "meanWaitMin": 31.142924373360017,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2652,
+        "p50WaitMin": 1.5239478486333333,
+        "p95WaitMin": 20.429093711133333,
+        "p99WaitMin": 26.561057501483333,
+        "meanWaitMin": 5.561655334215223,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1528,
+        "p50WaitMin": 9.915881175316667,
+        "p95WaitMin": 47.9373926001,
+        "p99WaitMin": 57.34201362811667,
+        "meanWaitMin": 15.373016757191843,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1046,
+        "p50WaitMin": 46.94083103465,
+        "p95WaitMin": 97.11804233948334,
+        "p99WaitMin": 129.79916722735,
+        "meanWaitMin": 45.62321655224228,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 367,
+        "p50WaitMin": 172.06180643718332,
+        "p95WaitMin": 296.6607311428833,
+        "p99WaitMin": 316.8385430059,
+        "meanWaitMin": 166.2669722660878,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11186,
+    "cycleP99Micros": 74,
+    "guaranteeShortfallGpuH": 816.3054038780878
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 1,
+    "jobs": 5631,
+    "offeredLoad": 0.9881171184758182,
+    "utilization": 0.9224244151543662,
+    "usefulUtilization": 0.9224244151543662,
+    "idleWhileQueuedFrac": 0.06613996577485325,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1657,
+        "p50WaitMin": 0,
+        "p95WaitMin": 852.2903708753166,
+        "p99WaitMin": 1509.94084050605,
+        "meanWaitMin": 101.25562886637685,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2426,
+        "p50WaitMin": 0.23477718351666665,
+        "p95WaitMin": 15.3405571824,
+        "p99WaitMin": 47.44884874398333,
+        "meanWaitMin": 3.256393634241627,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1548,
+        "p50WaitMin": 0.26949239825,
+        "p95WaitMin": 173.37969114591667,
+        "p99WaitMin": 415.71605372851667,
+        "meanWaitMin": 27.24169111369176,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2672,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.44404031895,
+        "p99WaitMin": 13.804184343033333,
+        "meanWaitMin": 0.9943733119204403,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1543,
+        "p50WaitMin": 0.0701779828,
+        "p95WaitMin": 22.5560176607,
+        "p99WaitMin": 109.04911122363333,
+        "meanWaitMin": 5.726257689169419,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1083,
+        "p50WaitMin": 5.023938128066667,
+        "p95WaitMin": 150.4017615687,
+        "p99WaitMin": 436.85658909673333,
+        "meanWaitMin": 30.547041528455964,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 383.9683746365,
+        "p95WaitMin": 1509.94084050605,
+        "p99WaitMin": 1666.2809366433332,
+        "meanWaitMin": 520.3474437029842,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11262,
+    "cycleP99Micros": 128,
+    "guaranteeShortfallGpuH": 978.7222623121273
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 2,
+    "jobs": 5700,
+    "offeredLoad": 0.9853671108838249,
+    "utilization": 0.9300600930871007,
+    "usefulUtilization": 0.9300600930871007,
+    "idleWhileQueuedFrac": 0.06319484360972452,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1666,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1599.2992321108334,
+        "p99WaitMin": 2257.7459776235833,
+        "meanWaitMin": 177.1180829386916,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2390,
+        "p50WaitMin": 0.15781020963333334,
+        "p95WaitMin": 22.309228434233333,
+        "p99WaitMin": 86.35266503926667,
+        "meanWaitMin": 4.379131527491709,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1644,
+        "p50WaitMin": 0,
+        "p95WaitMin": 180.84877419143334,
+        "p99WaitMin": 327.01052731205,
+        "meanWaitMin": 23.943848821831004,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2639,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.8394041377166666,
+        "p99WaitMin": 15.25153946485,
+        "meanWaitMin": 0.9676572352733867,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1599,
+        "p50WaitMin": 0,
+        "p95WaitMin": 26.187399373566667,
+        "p99WaitMin": 62.78826532513333,
+        "meanWaitMin": 4.553499926832574,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1129,
+        "p50WaitMin": 4.1404144424,
+        "p95WaitMin": 147.01777606281667,
+        "p99WaitMin": 302.56625094313335,
+        "meanWaitMin": 26.175453112867455,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 868.6868580083667,
+        "p95WaitMin": 2257.7459776235833,
+        "p99WaitMin": 2334.4329351858833,
+        "meanWaitMin": 917.4827555505599,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11400,
+    "cycleP99Micros": 163,
+    "guaranteeShortfallGpuH": 937.6914212062038
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 3,
+    "jobs": 5587,
+    "offeredLoad": 0.9842632009152018,
+    "utilization": 0.926718073779344,
+    "usefulUtilization": 0.926718073779344,
+    "idleWhileQueuedFrac": 0.06604791175683423,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1632,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1481.81852970035,
+        "p99WaitMin": 1855.7330859913,
+        "meanWaitMin": 171.6686766892778,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2451,
+        "p50WaitMin": 0,
+        "p95WaitMin": 11.67922669155,
+        "p99WaitMin": 31.820075275883333,
+        "meanWaitMin": 2.3692777818041475,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1504,
+        "p50WaitMin": 0.15733672086666667,
+        "p95WaitMin": 222.51977862178333,
+        "p99WaitMin": 399.11108265905,
+        "meanWaitMin": 32.80721274053483,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2560,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.170675934816667,
+        "p99WaitMin": 13.494936886166666,
+        "meanWaitMin": 0.7562291295681639,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1608,
+        "p50WaitMin": 0,
+        "p95WaitMin": 13.4530457434,
+        "p99WaitMin": 57.3984607799,
+        "meanWaitMin": 3.193704614348911,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1064,
+        "p50WaitMin": 4.540777882616666,
+        "p95WaitMin": 203.39868527138333,
+        "p99WaitMin": 339.30954116085,
+        "meanWaitMin": 35.71352363702797,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 355,
+        "p50WaitMin": 805.4276949722833,
+        "p95WaitMin": 1830.88730620065,
+        "p99WaitMin": 3357.1421169783166,
+        "meanWaitMin": 817.5825786493025,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11174,
+    "cycleP99Micros": 199,
+    "guaranteeShortfallGpuH": 908.6629181566711
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 4,
+    "jobs": 5635,
+    "offeredLoad": 1.013058087296147,
+    "utilization": 0.9245123115193201,
+    "usefulUtilization": 0.9245123115193201,
+    "idleWhileQueuedFrac": 0.06740453039999997,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1696,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1183.4580308695167,
+        "p99WaitMin": 1666.41144869725,
+        "meanWaitMin": 140.67039597815076,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2363,
+        "p50WaitMin": 0.034261043166666665,
+        "p95WaitMin": 10.244602702216667,
+        "p99WaitMin": 23.241421883216667,
+        "meanWaitMin": 1.949614185015715,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1576,
+        "p50WaitMin": 0.04153736815,
+        "p95WaitMin": 114.25855393036667,
+        "p99WaitMin": 286.8585281631667,
+        "meanWaitMin": 20.64708736338475,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2646,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.3883483165833335,
+        "p99WaitMin": 10.949596235383334,
+        "meanWaitMin": 0.6468046032986018,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1515,
+        "p50WaitMin": 0,
+        "p95WaitMin": 12.087270313016667,
+        "p99WaitMin": 42.4538398831,
+        "meanWaitMin": 2.7429112770013626,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1109,
+        "p50WaitMin": 3.7450180082499998,
+        "p95WaitMin": 142.41520701825,
+        "p99WaitMin": 271.08835165125,
+        "meanWaitMin": 24.5639668446626,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 365,
+        "p50WaitMin": 569.0168518338,
+        "p95WaitMin": 1664.4487482666666,
+        "p99WaitMin": 2116.743830508083,
+        "meanWaitMin": 664.699574759217,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11270,
+    "cycleP99Micros": 140,
+    "guaranteeShortfallGpuH": 863.2705287902016
+  },
+  {
+    "policy": "priority-bestfit-nopreempt",
+    "seed": 5,
+    "jobs": 5593,
+    "offeredLoad": 0.9897373776263757,
+    "utilization": 0.9103300017291956,
+    "usefulUtilization": 0.9103300017291956,
+    "idleWhileQueuedFrac": 0.07688925126042737,
+    "preemptions": 0,
+    "lostGpuHours": 0,
+    "lostFracOfDelivered": 0,
+    "byClass": {
+      "batch": {
+        "jobs": 1656,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1304.5882334055666,
+        "p99WaitMin": 1651.4294141174166,
+        "meanWaitMin": 146.84174123006554,
+        "preemptions": 0
+      },
+      "critical": {
+        "jobs": 2379,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.970107476683333,
+        "p99WaitMin": 15.727515879333334,
+        "meanWaitMin": 1.10606813704495,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1558,
+        "p50WaitMin": 0,
+        "p95WaitMin": 44.78056168705,
+        "p99WaitMin": 101.05054207393333,
+        "meanWaitMin": 7.138358716312946,
+        "preemptions": 0
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2652,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1.86804793115,
+        "p99WaitMin": 6.681725354866667,
+        "meanWaitMin": 0.29794945467911643,
+        "preemptions": 0
+      },
+      "2": {
+        "jobs": 1528,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.4761326189,
+        "p99WaitMin": 12.604254944200001,
+        "meanWaitMin": 0.9671333595485162,
+        "preemptions": 0
+      },
+      "4": {
+        "jobs": 1046,
+        "p50WaitMin": 1.3546343499833333,
+        "p95WaitMin": 30.801849313733335,
+        "p99WaitMin": 71.16822770953334,
+        "meanWaitMin": 6.526698528459684,
+        "preemptions": 0
+      },
+      "8": {
+        "jobs": 367,
+        "p50WaitMin": 488.14938614753333,
+        "p95WaitMin": 1649.4867430704833,
+        "p99WaitMin": 1775.1525684206667,
+        "meanWaitMin": 675.2805287930955,
+        "preemptions": 0
+      }
+    },
+    "cycles": 11186,
+    "cycleP99Micros": 130,
+    "guaranteeShortfallGpuH": 932.5444636680592
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 1,
+    "jobs": 5631,
+    "offeredLoad": 0.9881171184758182,
+    "utilization": 0.9594010118833793,
+    "usefulUtilization": 0.8687961786149768,
+    "idleWhileQueuedFrac": 0.029161625664134685,
+    "preemptions": 2998,
+    "lostGpuHours": 839.6819184960531,
+    "lostFracOfDelivered": 0.09220700418771814,
+    "byClass": {
+      "batch": {
+        "jobs": 1657,
+        "p50WaitMin": 0,
+        "p95WaitMin": 895.9533584568,
+        "p99WaitMin": 2290.684359272717,
+        "meanWaitMin": 125.31189575626124,
+        "preemptions": 635
+      },
+      "critical": {
+        "jobs": 2426,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.59738408915,
+        "p99WaitMin": 20.731257944666666,
+        "meanWaitMin": 0.7848376349971287,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1548,
+        "p50WaitMin": 0,
+        "p95WaitMin": 237.97797087965,
+        "p99WaitMin": 375.6917762753,
+        "meanWaitMin": 34.720287432525005,
+        "preemptions": 2363
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2672,
+        "p50WaitMin": 0,
+        "p95WaitMin": 11.619427879016667,
+        "p99WaitMin": 30.981967982816666,
+        "meanWaitMin": 1.610163192169922,
+        "preemptions": 1164
+      },
+      "2": {
+        "jobs": 1543,
+        "p50WaitMin": 0,
+        "p95WaitMin": 60.94765787123333,
+        "p99WaitMin": 114.86833279488333,
+        "meanWaitMin": 7.41887774084646,
+        "preemptions": 854
+      },
+      "4": {
+        "jobs": 1083,
+        "p50WaitMin": 1.6858541035833334,
+        "p95WaitMin": 294.13226055953334,
+        "p99WaitMin": 389.59719036518334,
+        "meanWaitMin": 37.57060012115826,
+        "preemptions": 831
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 441.2423115043333,
+        "p95WaitMin": 2290.684359272717,
+        "p99WaitMin": 2903.2497909305666,
+        "meanWaitMin": 621.1837476917663,
+        "preemptions": 149
+      }
+    },
+    "cycles": 14260,
+    "cycleP99Micros": 434,
+    "guaranteeShortfallGpuH": 652.8274189467679
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 2,
+    "jobs": 5700,
+    "offeredLoad": 0.9853671108838249,
+    "utilization": 0.9662402298272232,
+    "usefulUtilization": 0.8829756508548743,
+    "idleWhileQueuedFrac": 0.027014706869602913,
+    "preemptions": 3135,
+    "lostGpuHours": 775.6115232387843,
+    "lostFracOfDelivered": 0.08540901713987094,
+    "byClass": {
+      "batch": {
+        "jobs": 1666,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1794.6584291671834,
+        "p99WaitMin": 2520.476919334467,
+        "meanWaitMin": 205.03945287543758,
+        "preemptions": 608
+      },
+      "critical": {
+        "jobs": 2390,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.675863727383334,
+        "p99WaitMin": 24.2068689575,
+        "meanWaitMin": 0.9654471912639054,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1644,
+        "p50WaitMin": 0.5618564200333334,
+        "p95WaitMin": 154.0990738548,
+        "p99WaitMin": 246.52444010586666,
+        "meanWaitMin": 33.425589816970906,
+        "preemptions": 2527
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2639,
+        "p50WaitMin": 0,
+        "p95WaitMin": 20.56563247425,
+        "p99WaitMin": 41.91935253125,
+        "meanWaitMin": 2.2956589204394464,
+        "preemptions": 1079
+      },
+      "2": {
+        "jobs": 1599,
+        "p50WaitMin": 0,
+        "p95WaitMin": 86.2437123413,
+        "p99WaitMin": 117.36241289693334,
+        "meanWaitMin": 10.652967203558452,
+        "preemptions": 1079
+      },
+      "4": {
+        "jobs": 1129,
+        "p50WaitMin": 1.8017192097333332,
+        "p95WaitMin": 177.87557630181666,
+        "p99WaitMin": 236.4900076875,
+        "meanWaitMin": 33.00172465919978,
+        "preemptions": 884
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 859.4481429931667,
+        "p95WaitMin": 2520.476919334467,
+        "p99WaitMin": 3019.4044530649167,
+        "meanWaitMin": 1016.5271211619632,
+        "preemptions": 93
+      }
+    },
+    "cycles": 14535,
+    "cycleP99Micros": 500,
+    "guaranteeShortfallGpuH": 560.5492830804491
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 3,
+    "jobs": 5587,
+    "offeredLoad": 0.9842632009152018,
+    "utilization": 0.955456903137383,
+    "usefulUtilization": 0.8790131798556183,
+    "idleWhileQueuedFrac": 0.03734482023940537,
+    "preemptions": 2958,
+    "lostGpuHours": 706.7092010972194,
+    "lostFracOfDelivered": 0.07790889261178448,
+    "byClass": {
+      "batch": {
+        "jobs": 1632,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1702.01880817645,
+        "p99WaitMin": 2609.4417044104334,
+        "meanWaitMin": 197.9683584064086,
+        "preemptions": 477
+      },
+      "critical": {
+        "jobs": 2451,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.1116455772166667,
+        "p99WaitMin": 9.152729299033334,
+        "meanWaitMin": 0.379628104961662,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1504,
+        "p50WaitMin": 1.1059982147833334,
+        "p95WaitMin": 194.2437971691,
+        "p99WaitMin": 306.8040392862667,
+        "meanWaitMin": 38.449199937892004,
+        "preemptions": 2481
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2560,
+        "p50WaitMin": 0,
+        "p95WaitMin": 13.955745396733333,
+        "p99WaitMin": 26.2886515903,
+        "meanWaitMin": 1.5543858136780995,
+        "preemptions": 1128
+      },
+      "2": {
+        "jobs": 1608,
+        "p50WaitMin": 0,
+        "p95WaitMin": 68.26801051935,
+        "p99WaitMin": 112.79923643205,
+        "meanWaitMin": 8.076630537095992,
+        "preemptions": 970
+      },
+      "4": {
+        "jobs": 1064,
+        "p50WaitMin": 0.13484314533333333,
+        "p95WaitMin": 181.367414021,
+        "p99WaitMin": 233.73555118536666,
+        "meanWaitMin": 24.734674952184495,
+        "preemptions": 719
+      },
+      "8": {
+        "jobs": 355,
+        "p50WaitMin": 754.35398617,
+        "p95WaitMin": 2606.3919526340833,
+        "p99WaitMin": 3397.411631210167,
+        "meanWaitMin": 953.685302465687,
+        "preemptions": 141
+      }
+    },
+    "cycles": 14132,
+    "cycleP99Micros": 535,
+    "guaranteeShortfallGpuH": 618.5452207652208
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 4,
+    "jobs": 5635,
+    "offeredLoad": 1.013058087296147,
+    "utilization": 0.9532959641322546,
+    "usefulUtilization": 0.8552386988401047,
+    "idleWhileQueuedFrac": 0.03862087778706932,
+    "preemptions": 2963,
+    "lostGpuHours": 903.695756932453,
+    "lostFracOfDelivered": 0.0967933295452631,
+    "byClass": {
+      "batch": {
+        "jobs": 1696,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1711.1098932635,
+        "p99WaitMin": 2440.5035166070666,
+        "meanWaitMin": 204.11964306793723,
+        "preemptions": 618
+      },
+      "critical": {
+        "jobs": 2363,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.3521170138166667,
+        "p99WaitMin": 9.3958106093,
+        "meanWaitMin": 0.39804075286556634,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1576,
+        "p50WaitMin": 0,
+        "p95WaitMin": 129.81846372121666,
+        "p99WaitMin": 269.20330944778334,
+        "meanWaitMin": 24.952563550004108,
+        "preemptions": 2345
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2646,
+        "p50WaitMin": 0,
+        "p95WaitMin": 10.365044661766667,
+        "p99WaitMin": 21.8550049431,
+        "meanWaitMin": 1.1662613267039377,
+        "preemptions": 907
+      },
+      "2": {
+        "jobs": 1515,
+        "p50WaitMin": 0,
+        "p95WaitMin": 44.00052439976667,
+        "p99WaitMin": 74.41101624411667,
+        "meanWaitMin": 6.89073920715506,
+        "preemptions": 1039
+      },
+      "4": {
+        "jobs": 1109,
+        "p50WaitMin": 0.11259296998333333,
+        "p95WaitMin": 154.07204790873334,
+        "p99WaitMin": 267.6635628078167,
+        "meanWaitMin": 25.89296063280947,
+        "preemptions": 862
+      },
+      "8": {
+        "jobs": 365,
+        "p50WaitMin": 771.8955134680666,
+        "p95WaitMin": 2299.5559324864666,
+        "p99WaitMin": 2879.61226470855,
+        "meanWaitMin": 943.0466695505894,
+        "preemptions": 155
+      }
+    },
+    "cycles": 14233,
+    "cycleP99Micros": 455,
+    "guaranteeShortfallGpuH": 580.7171239623979
+  },
+  {
+    "policy": "priority-bestfit-preempt",
+    "seed": 5,
+    "jobs": 5593,
+    "offeredLoad": 0.9897373776263757,
+    "utilization": 0.9554869248494077,
+    "usefulUtilization": 0.8613969347194975,
+    "idleWhileQueuedFrac": 0.03173232814021553,
+    "preemptions": 3017,
+    "lostGpuHours": 870.0635737875888,
+    "lostFracOfDelivered": 0.09538685917926759,
+    "byClass": {
+      "batch": {
+        "jobs": 1656,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1423.0567533105834,
+        "p99WaitMin": 2571.0120776694,
+        "meanWaitMin": 185.44375696003635,
+        "preemptions": 649
+      },
+      "critical": {
+        "jobs": 2379,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.9671693199166667,
+        "p99WaitMin": 7.6464009395,
+        "meanWaitMin": 0.2485193620006585,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1558,
+        "p50WaitMin": 0,
+        "p95WaitMin": 122.31150415136666,
+        "p99WaitMin": 218.06559575605,
+        "meanWaitMin": 21.521565455613032,
+        "preemptions": 2368
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2652,
+        "p50WaitMin": 0,
+        "p95WaitMin": 11.2074911234,
+        "p99WaitMin": 30.48811197541667,
+        "meanWaitMin": 1.3774730522545946,
+        "preemptions": 941
+      },
+      "2": {
+        "jobs": 1528,
+        "p50WaitMin": 0,
+        "p95WaitMin": 31.986731269916667,
+        "p99WaitMin": 60.71028107151667,
+        "meanWaitMin": 4.463302698947515,
+        "preemptions": 930
+      },
+      "4": {
+        "jobs": 1046,
+        "p50WaitMin": 0.18839813868333333,
+        "p95WaitMin": 139.37104880723334,
+        "p99WaitMin": 217.09469047333334,
+        "meanWaitMin": 21.21804891730185,
+        "preemptions": 1001
+      },
+      "8": {
+        "jobs": 367,
+        "p50WaitMin": 601.1124047319333,
+        "p95WaitMin": 2524.250465126,
+        "p99WaitMin": 3254.3663238035165,
+        "meanWaitMin": 840.7346698686545,
+        "preemptions": 145
+      }
+    },
+    "cycles": 14203,
+    "cycleP99Micros": 419,
+    "guaranteeShortfallGpuH": 511.4258933014133
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 1,
+    "jobs": 5631,
+    "offeredLoad": 0.9881171184758182,
+    "utilization": 0.9428278993277718,
+    "usefulUtilization": 0.8539737547435333,
+    "idleWhileQueuedFrac": 0.04735732469057387,
+    "preemptions": 3140,
+    "lostGpuHours": 821.5109051298822,
+    "lostFracOfDelivered": 0.09021161204142712,
+    "byClass": {
+      "batch": {
+        "jobs": 1657,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1157.4194204352666,
+        "p99WaitMin": 2826.88255744305,
+        "meanWaitMin": 160.52736874002676,
+        "preemptions": 613
+      },
+      "critical": {
+        "jobs": 2426,
+        "p50WaitMin": 0,
+        "p95WaitMin": 3.638940595016667,
+        "p99WaitMin": 19.191142327266668,
+        "meanWaitMin": 0.6944597703968189,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1548,
+        "p50WaitMin": 0.17647326323333334,
+        "p95WaitMin": 190.99211984218334,
+        "p99WaitMin": 423.573044277,
+        "meanWaitMin": 37.1841705689437,
+        "preemptions": 2527
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2672,
+        "p50WaitMin": 0,
+        "p95WaitMin": 14.480993446233333,
+        "p99WaitMin": 32.689075983133336,
+        "meanWaitMin": 1.7557327474848243,
+        "preemptions": 1226
+      },
+      "2": {
+        "jobs": 1543,
+        "p50WaitMin": 0,
+        "p95WaitMin": 64.6387475221,
+        "p99WaitMin": 122.28575410903333,
+        "meanWaitMin": 7.908821422917781,
+        "preemptions": 950
+      },
+      "4": {
+        "jobs": 1083,
+        "p50WaitMin": 1.2948212276166666,
+        "p95WaitMin": 230.38557051168334,
+        "p99WaitMin": 490.3702947439,
+        "meanWaitMin": 35.9240971391753,
+        "preemptions": 833
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 685.0349964981167,
+        "p95WaitMin": 2826.88255744305,
+        "p99WaitMin": 3331.5968645968,
+        "meanWaitMin": 809.126963625716,
+        "preemptions": 131
+      }
+    },
+    "cycles": 14402,
+    "cycleP99Micros": 462,
+    "guaranteeShortfallGpuH": 786.9783096745882
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 2,
+    "jobs": 5700,
+    "offeredLoad": 0.9853671108838249,
+    "utilization": 0.9570747213442989,
+    "usefulUtilization": 0.8671145014309225,
+    "idleWhileQueuedFrac": 0.037818326252377736,
+    "preemptions": 3067,
+    "lostGpuHours": 867.2248666015752,
+    "lostFracOfDelivered": 0.09549732214704726,
+    "byClass": {
+      "batch": {
+        "jobs": 1666,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2051.9702207770165,
+        "p99WaitMin": 2732.3863167464165,
+        "meanWaitMin": 229.29437834133077,
+        "preemptions": 574
+      },
+      "critical": {
+        "jobs": 2390,
+        "p50WaitMin": 0,
+        "p95WaitMin": 4.2673500767,
+        "p99WaitMin": 23.651638144316667,
+        "meanWaitMin": 0.974407864715007,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1644,
+        "p50WaitMin": 0.15273716873333334,
+        "p95WaitMin": 209.31117853316667,
+        "p99WaitMin": 401.86464958233336,
+        "meanWaitMin": 41.34508046609269,
+        "preemptions": 2493
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2639,
+        "p50WaitMin": 0,
+        "p95WaitMin": 18.132245566533335,
+        "p99WaitMin": 54.32735297161667,
+        "meanWaitMin": 2.5304209684050587,
+        "preemptions": 1049
+      },
+      "2": {
+        "jobs": 1599,
+        "p50WaitMin": 0,
+        "p95WaitMin": 80.40751720568333,
+        "p99WaitMin": 116.2072393852,
+        "meanWaitMin": 9.862094078828244,
+        "preemptions": 1005
+      },
+      "4": {
+        "jobs": 1129,
+        "p50WaitMin": 1.87826827455,
+        "p95WaitMin": 207.1905705072,
+        "p99WaitMin": 333.27209488346665,
+        "meanWaitMin": 33.23577027388024,
+        "preemptions": 913
+      },
+      "8": {
+        "jobs": 333,
+        "p50WaitMin": 931.0131120553,
+        "p95WaitMin": 2732.3863167464165,
+        "p99WaitMin": 3250.9397771194836,
+        "meanWaitMin": 1178.1805627408535,
+        "preemptions": 100
+      }
+    },
+    "cycles": 14467,
+    "cycleP99Micros": 474,
+    "guaranteeShortfallGpuH": 656.5995485779845
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 3,
+    "jobs": 5587,
+    "offeredLoad": 0.9842632009152018,
+    "utilization": 0.9420526885295549,
+    "usefulUtilization": 0.8731093419811844,
+    "idleWhileQueuedFrac": 0.05129451302007317,
+    "preemptions": 2954,
+    "lostGpuHours": 635.3818817897828,
+    "lostFracOfDelivered": 0.07004564072319745,
+    "byClass": {
+      "batch": {
+        "jobs": 1632,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1745.1053018482667,
+        "p99WaitMin": 3081.3017485918,
+        "meanWaitMin": 205.78669895881225,
+        "preemptions": 487
+      },
+      "critical": {
+        "jobs": 2451,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.4505668779833334,
+        "p99WaitMin": 9.1648054206,
+        "meanWaitMin": 0.38562741134899364,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1504,
+        "p50WaitMin": 2.0043380376333335,
+        "p95WaitMin": 252.7796110326,
+        "p99WaitMin": 399.60563632175,
+        "meanWaitMin": 46.3445833188135,
+        "preemptions": 2467
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2560,
+        "p50WaitMin": 0,
+        "p95WaitMin": 13.8045061346,
+        "p99WaitMin": 27.808933926416668,
+        "meanWaitMin": 1.5930493044536325,
+        "preemptions": 1108
+      },
+      "2": {
+        "jobs": 1608,
+        "p50WaitMin": 0,
+        "p95WaitMin": 72.72904874948334,
+        "p99WaitMin": 113.39681567503334,
+        "meanWaitMin": 8.202856022884335,
+        "preemptions": 928
+      },
+      "4": {
+        "jobs": 1064,
+        "p50WaitMin": 1.3924536364333333,
+        "p95WaitMin": 225.88594641305,
+        "p99WaitMin": 327.22083525825,
+        "meanWaitMin": 32.16608499963828,
+        "preemptions": 770
+      },
+      "8": {
+        "jobs": 355,
+        "p50WaitMin": 663.7559305674333,
+        "p95WaitMin": 3057.075510129,
+        "p99WaitMin": 3521.8915659562335,
+        "meanWaitMin": 999.9949455033213,
+        "preemptions": 148
+      }
+    },
+    "cycles": 14128,
+    "cycleP99Micros": 469,
+    "guaranteeShortfallGpuH": 660.8780681370442
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 4,
+    "jobs": 5635,
+    "offeredLoad": 1.013058087296147,
+    "utilization": 0.9267771038483779,
+    "usefulUtilization": 0.8435016732653393,
+    "idleWhileQueuedFrac": 0.06750008820386189,
+    "preemptions": 2849,
+    "lostGpuHours": 767.4663682532838,
+    "lostFracOfDelivered": 0.08220202930840897,
+    "byClass": {
+      "batch": {
+        "jobs": 1696,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2064.78164942305,
+        "p99WaitMin": 2748.6987810538667,
+        "meanWaitMin": 236.7319552625795,
+        "preemptions": 568
+      },
+      "critical": {
+        "jobs": 2363,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.3851918271166666,
+        "p99WaitMin": 8.382687847083334,
+        "meanWaitMin": 0.358458876287812,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1576,
+        "p50WaitMin": 0,
+        "p95WaitMin": 124.44561995753334,
+        "p99WaitMin": 235.92787207476667,
+        "meanWaitMin": 25.512822658068966,
+        "preemptions": 2281
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2646,
+        "p50WaitMin": 0,
+        "p95WaitMin": 5.55774586455,
+        "p99WaitMin": 20.5431593384,
+        "meanWaitMin": 0.8542948310243323,
+        "preemptions": 822
+      },
+      "2": {
+        "jobs": 1515,
+        "p50WaitMin": 0,
+        "p95WaitMin": 40.059528304666664,
+        "p99WaitMin": 73.1081615922,
+        "meanWaitMin": 5.740613787810616,
+        "preemptions": 1046
+      },
+      "4": {
+        "jobs": 1109,
+        "p50WaitMin": 0.12839912886666666,
+        "p95WaitMin": 166.18020344198334,
+        "p99WaitMin": 225.53765219601667,
+        "meanWaitMin": 25.07329526053232,
+        "preemptions": 853
+      },
+      "8": {
+        "jobs": 365,
+        "p50WaitMin": 972.88405058495,
+        "p95WaitMin": 2705.93120172205,
+        "p99WaitMin": 3151.6882025314667,
+        "meanWaitMin": 1106.270861654153,
+        "preemptions": 128
+      }
+    },
+    "cycles": 14119,
+    "cycleP99Micros": 481,
+    "guaranteeShortfallGpuH": 764.3932972157063
+  },
+  {
+    "policy": "priority-spread-preempt",
+    "seed": 5,
+    "jobs": 5593,
+    "offeredLoad": 0.9897373776263757,
+    "utilization": 0.931229325950351,
+    "usefulUtilization": 0.8481223206039149,
+    "idleWhileQueuedFrac": 0.060844631587885875,
+    "preemptions": 2490,
+    "lostGpuHours": 771.0123005600062,
+    "lostFracOfDelivered": 0.08452766436232288,
+    "byClass": {
+      "batch": {
+        "jobs": 1656,
+        "p50WaitMin": 0,
+        "p95WaitMin": 1979.91367034035,
+        "p99WaitMin": 2557.9434235766835,
+        "meanWaitMin": 226.80767432880313,
+        "preemptions": 549
+      },
+      "critical": {
+        "jobs": 2379,
+        "p50WaitMin": 0,
+        "p95WaitMin": 0.0299776566,
+        "p99WaitMin": 4.52478106785,
+        "meanWaitMin": 0.14566055310537343,
+        "preemptions": 0
+      },
+      "standard": {
+        "jobs": 1558,
+        "p50WaitMin": 0,
+        "p95WaitMin": 94.00596734008333,
+        "p99WaitMin": 181.87654957946665,
+        "meanWaitMin": 15.422780705559305,
+        "preemptions": 1941
+      }
+    },
+    "bySize": {
+      "1": {
+        "jobs": 2652,
+        "p50WaitMin": 0,
+        "p95WaitMin": 2.36565526705,
+        "p99WaitMin": 16.218520401983334,
+        "meanWaitMin": 0.5354584202478758,
+        "preemptions": 644
+      },
+      "2": {
+        "jobs": 1528,
+        "p50WaitMin": 0,
+        "p95WaitMin": 18.649238774016666,
+        "p99WaitMin": 40.164299997966666,
+        "meanWaitMin": 2.3724022645526945,
+        "preemptions": 772
+      },
+      "4": {
+        "jobs": 1046,
+        "p50WaitMin": 0,
+        "p95WaitMin": 111.34098061221667,
+        "p99WaitMin": 182.77895714661668,
+        "meanWaitMin": 18.330044279507966,
+        "preemptions": 953
+      },
+      "8": {
+        "jobs": 367,
+        "p50WaitMin": 827.7362658014167,
+        "p95WaitMin": 2541.9380364069166,
+        "p99WaitMin": 3116.05729174635,
+        "meanWaitMin": 1023.8431465299668,
+        "preemptions": 121
+      }
+    },
+    "cycles": 13676,
+    "cycleP99Micros": 448,
+    "guaranteeShortfallGpuH": 691.3130256951862
+  }
+]

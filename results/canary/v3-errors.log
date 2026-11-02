@@ -1,0 +1,4 @@
+{"time":"2026-11-02T21:17:01.892550298Z","level":"INFO","msg":"canary step","percent":25,"stableReplicas":2,"canaryReplicas":1}
+{"time":"2026-11-02T21:17:18.94527646Z","level":"INFO","msg":"analysis","step":25,"verdict":"breach","requests":158.325,"errorRate":0.14403410705826625,"p95":0.00475,"reason":"error rate 14.40% > 2.00%"}
+{"time":"2026-11-02T21:17:33.955904371Z","level":"INFO","msg":"analysis","step":25,"verdict":"breach","requests":368.631,"errorRate":0.14115134104293997,"p95":0.00475,"reason":"error rate 14.12% > 2.00%"}
+{"time":"2026-11-02T21:17:33.956121263Z","level":"WARN","msg":"rolling back canary","reason":"SLO breach at 25%: error rate 14.12% > 2.00%"}

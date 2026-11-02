@@ -1,0 +1,6 @@
+apiVersion: v2
+name: gpu-scheduler
+description: GPU job scheduler control plane, simulated node agents, model server with canary, and a small Prometheus/Grafana stack
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

@@ -1,0 +1,10 @@
+k8s_tools_kubectl_version: v1.31.1
+k8s_tools_kind_version: v0.24.0
+k8s_tools_helm_version: v3.16.2
+k8s_tools_tofu_version: 1.8.5
+k8s_tools_bin_dir: /usr/local/bin
+k8s_tools_arch_map: {x86_64: amd64, aarch64: arm64}
+k8s_tools_arch: "{{ k8s_tools_arch_map[ansible_architecture] }}"
+k8s_tools_kind_url: "https://github.com/kubernetes-sigs/kind/releases/download/{{ k8s_tools_kind_version }}/kind-linux-{{ k8s_tools_arch }}"
+k8s_tools_tofu_base: "https://github.com/opentofu/opentofu/releases/download/v{{ k8s_tools_tofu_version }}"
+k8s_tools_tofu_url: "{{ k8s_tools_tofu_base }}/tofu_{{ k8s_tools_tofu_version }}_linux_{{ k8s_tools_arch }}.tar.gz"

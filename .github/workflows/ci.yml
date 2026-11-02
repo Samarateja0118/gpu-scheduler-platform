@@ -1,0 +1,165 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: gpusched
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports: ["6379:6379"]
+        options: >-
+          --health-cmd "redis-cli ping" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/gpusched?sslmode=disable
+      REDIS_ADDR: localhost:6379
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: gofmt
+        run: test -z "$(gofmt -l .)" || (gofmt -l . && exit 1)
+      - name: go vet
+        run: go vet ./...
+      - name: unit + integration tests (race detector, real Postgres and Redis)
+        run: go test -race -count=1 ./...
+      - name: scheduler benchmark smoke (1 seed, 24h trace)
+        run: go run ./cmd/simbench -seeds 1 -hours 24 -loads 0.9
+      - name: scheduling pass micro-benchmark
+        run: go test -run '^$' -bench . -benchtime 20x ./internal/scheduler/
+
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+        with:
+          version: v3.16.2
+      - name: helm lint + render
+        run: |
+          helm lint deploy/helm/gpu-scheduler
+          helm template gs deploy/helm/gpu-scheduler --namespace gpusched > rendered.yaml
+      - name: kubeconform
+        run: |
+          curl -sSL https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz | tar xz kubeconform
+          ./kubeconform -strict -summary -kubernetes-version 1.31.0 rendered.yaml
+      - name: promtool check rules
+        run: docker run --rm -v "$PWD/deploy/helm/gpu-scheduler/files:/f" --entrypoint promtool prom/prometheus:v2.54.1 check rules /f/alerts.yaml
+      - uses: opentofu/setup-opentofu@v1
+        with:
+          tofu_version: 1.8.5
+      - name: tofu fmt + validate
+        working-directory: infra/terraform
+        run: |
+          tofu fmt -check -recursive
+          tofu init -backend=false -input=false
+          tofu validate
+      - name: ansible-lint
+        run: |
+          pip install ansible-core==2.17.5 ansible-lint==24.9.2
+          cd infra/ansible && ansible-playbook --syntax-check site.yml && ansible-lint site.yml
+
+  images:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        component: [scheduler, nodeagent, modelserver, rollout, gpuctl, loadgen]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        if: github.event_name == 'push'
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: image name
+        run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY,,}/${{ matrix.component }}" >> "$GITHUB_ENV"
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          build-args: CMD=${{ matrix.component }}
+          push: ${{ github.event_name == 'push' }}
+          tags: |
+            ${{ env.IMAGE }}:${{ github.sha }}
+            ${{ env.IMAGE }}:latest
+          cache-from: type=gha,scope=${{ matrix.component }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.component }}
+
+  # Deploy the freshly built images to an ephemeral kind cluster and run
+  # the failure and canary scenarios against it.
+  e2e-kind:
+    needs: [test, manifests]
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - uses: azure/setup-helm@v4
+        with:
+          version: v3.16.2
+      - uses: helm/kind-action@v1
+        with:
+          cluster_name: gpusched
+          version: v0.24.0
+          node_image: kindest/node:v1.31.0
+      - name: metrics-server (for the HPA)
+        run: |
+          kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.7.2/components.yaml
+          kubectl -n kube-system patch deploy metrics-server --type=json \
+            -p '[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"}]'
+      - name: build images and load into kind
+        run: |
+          for c in scheduler nodeagent modelserver loadgen; do
+            docker build -q --build-arg CMD=$c -t gpusched/$c:ci .
+            kind load docker-image gpusched/$c:ci --name gpusched
+          done
+          go build -o /usr/local/bin/gpuctl ./cmd/gpuctl
+          go build -o /usr/local/bin/rollout ./cmd/rollout
+      - name: helm install
+        run: |
+          helm upgrade --install gs deploy/helm/gpu-scheduler -n gpusched --create-namespace \
+            --set image.registry=gpusched --set image.tag=ci --wait --timeout 8m
+          kubectl -n gpusched get pods
+      - name: scheduler e2e (node agent loss + scheduler restart)
+        run: JOBS=80 ./scripts/e2e-scheduler.sh
+      - name: canary e2e (promote healthy, roll back errors and latency)
+        run: IMAGE=gpusched/modelserver:ci LOADGEN_IMAGE=gpusched/loadgen:ci STEP=45s ./scripts/e2e-canary.sh
+      - name: diagnostics
+        if: failure()
+        run: |
+          kubectl -n gpusched get pods -o wide
+          kubectl -n gpusched logs deploy/scheduler --tail=200 || true
+          kubectl -n gpusched get events --sort-by=.lastTimestamp | tail -50
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e2e-results
+          path: results/

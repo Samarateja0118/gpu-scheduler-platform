@@ -1,0 +1,1 @@
+{"requests": [{"track":"stable","version":"v1","value":4328},{"track":"canary","version":"v2","value":4171},{"track":"stable","version":"v2","value":8152},{"track":"canary","version":"v3-bad","value":792},{"track":"canary","version":"v4-slow","value":719}], "errors": [{"track":"canary","version":"v3-bad","value":127}]}

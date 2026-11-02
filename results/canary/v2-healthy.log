@@ -1,0 +1,11 @@
+{"time":"2026-11-02T21:14:55.591757624Z","level":"INFO","msg":"canary step","percent":25,"stableReplicas":2,"canaryReplicas":1}
+{"time":"2026-11-02T21:15:12.640338774Z","level":"INFO","msg":"analysis","step":25,"verdict":"pass","requests":188.7342,"errorRate":0,"p95":0.004750000000000001,"reason":""}
+{"time":"2026-11-02T21:15:27.647827028Z","level":"INFO","msg":"analysis","step":25,"verdict":"pass","requests":393.36704,"errorRate":0,"p95":0.00475,"reason":""}
+{"time":"2026-11-02T21:15:42.660206Z","level":"INFO","msg":"analysis","step":25,"verdict":"pass","requests":600.2262499999999,"errorRate":0,"p95":0.00475,"reason":""}
+{"time":"2026-11-02T21:15:57.67061781Z","level":"INFO","msg":"analysis","step":25,"verdict":"pass","requests":825.8181818181818,"errorRate":0,"p95":0.00475,"reason":""}
+{"time":"2026-11-02T21:15:57.675822787Z","level":"INFO","msg":"canary step","percent":50,"stableReplicas":2,"canaryReplicas":2}
+{"time":"2026-11-02T21:16:14.717084467Z","level":"INFO","msg":"analysis","step":50,"verdict":"pass","requests":926.1308727272726,"errorRate":0,"p95":0.00475,"reason":""}
+{"time":"2026-11-02T21:16:29.727723755Z","level":"INFO","msg":"analysis","step":50,"verdict":"pass","requests":1016.8205963636362,"errorRate":0,"p95":0.004749999999999999,"reason":""}
+{"time":"2026-11-02T21:16:44.73588344Z","level":"INFO","msg":"analysis","step":50,"verdict":"pass","requests":1087.1050500000001,"errorRate":0,"p95":0.004750000000000001,"reason":""}
+{"time":"2026-11-02T21:16:59.742753106Z","level":"INFO","msg":"analysis","step":50,"verdict":"pass","requests":1209.8181818181818,"errorRate":0,"p95":0.004750000000000001,"reason":""}
+{"time":"2026-11-02T21:16:59.74282048Z","level":"INFO","msg":"canary healthy at every step; promoting","image":"gpusched/modelserver:dev"}

@@ -1,0 +1,77 @@
+# Images are built by CI as <registry>/<component>:<tag>.
+image:
+  registry: ghcr.io/samarateja0118/gpu-scheduler-platform
+  tag: latest
+  pullPolicy: IfNotPresent
+
+apiToken: ""   # bearer token for mutating API calls; generated if empty
+
+scheduler:
+  replicas: 1  # single active scheduler; see README "at scale" for leader election
+  policy:
+    ordering: priority
+    placement: bestfit
+    preemption: true
+    enforceQuota: true
+  nodeTimeout: 15s
+  tenants:
+    - {name: inference, guaranteed: 24, max: 32}
+    - {name: research, guaranteed: 24, max: 56}
+    - {name: batch, guaranteed: 16, max: 64}
+  resources:
+    requests: {cpu: 50m, memory: 64Mi}
+    limits: {cpu: 500m, memory: 256Mi}
+
+# Each entry is a Deployment of node agents; each replica simulates
+# nodesPerReplica GPU nodes with gpusPerNode GPUs.
+nodePools:
+  - name: a100
+    gpuType: a100
+    replicas: 2
+    nodesPerReplica: 3
+    gpusPerNode: 8
+  - name: h100
+    gpuType: h100
+    replicas: 1
+    nodesPerReplica: 2
+    gpusPerNode: 8
+nodeAgent:
+  heartbeat: 2s
+  failRate: "0"
+  resources:
+    requests: {cpu: 10m, memory: 16Mi}
+    limits: {cpu: 200m, memory: 64Mi}
+
+postgres:
+  enabled: true
+  image: postgres:16-alpine
+  storage: 1Gi
+  password: ""   # generated if empty
+redis:
+  enabled: true
+  image: redis:7-alpine
+
+modelserver:
+  version: v1
+  replicas: 2
+  mlpLayers: 32
+  resources:
+    requests: {cpu: 100m, memory: 32Mi}
+    limits: {cpu: 500m, memory: 64Mi}
+  hpa:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 8
+    targetCPU: 60
+
+monitoring:
+  enabled: true
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    retention: 2d
+  grafana:
+    image: grafana/grafana:11.2.2
+    adminPassword: ""  # generated if empty
+
+networkPolicies:
+  enabled: true

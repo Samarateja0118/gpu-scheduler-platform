@@ -1,0 +1,75 @@
+groups:
+  - name: gpu-scheduler
+    rules:
+      - alert: GPUSchedulerDown
+        expr: absent(up{app="scheduler"} == 1)
+        for: 1m
+        labels: {severity: page}
+        annotations:
+          summary: Scheduler control plane is not being scraped or is down; no jobs are being placed.
+      - alert: GPUNodeNotReady
+        expr: gpusched_nodes{state="not_ready"} > 0
+        for: 1m
+        labels: {severity: ticket}
+        annotations:
+          summary: "{{ $value }} GPU node(s) stopped heartbeating; their jobs were requeued."
+      - alert: CriticalJobsWaiting
+        expr: gpusched_pending_jobs{class="critical"} > 0 and on() gpusched_oldest_pending_seconds > 300
+        for: 5m
+        labels: {severity: page}
+        annotations:
+          summary: Critical jobs have waited over 5 minutes; check quotas, preemption settings and capacity.
+      - alert: QueueBacklogWithIdleGPUs
+        expr: |
+          sum(gpusched_pending_jobs) > 0
+          and on()
+          (sum(gpusched_gpus_total) - sum(gpusched_gpus_allocated)) / sum(gpusched_gpus_total) > 0.25
+        for: 10m
+        labels: {severity: ticket}
+        annotations:
+          summary: Jobs are queued while over 25% of GPUs sit idle (fragmentation, GPU type mismatch or tenant max too low).
+      - alert: HighPreemptionRate
+        expr: sum(rate(gpusched_preemptions_total[15m])) * 60 > 5
+        for: 15m
+        labels: {severity: ticket}
+        annotations:
+          summary: More than 5 preemptions per minute; work is being thrown away. Review priorities and guarantees.
+      - alert: SchedulerPersistenceBacklog
+        expr: gpusched_persist_backlog > 1000
+        for: 5m
+        labels: {severity: page}
+        annotations:
+          summary: Postgres writes are falling behind; at 50k the scheduler stops placing jobs.
+      - alert: IntakeQueueLag
+        expr: gpusched_intake_queue_depth > 100
+        for: 5m
+        labels: {severity: ticket}
+        annotations:
+          summary: Submissions are piling up in the Redis intake stream.
+  - name: modelserver-slo
+    rules:
+      - record: modelserver:error_ratio:rate5m
+        expr: sum by (track) (rate(modelserver_requests_total{code=~"5.."}[5m])) / sum by (track) (rate(modelserver_requests_total[5m]))
+      - record: modelserver:error_ratio:rate1h
+        expr: sum by (track) (rate(modelserver_requests_total{code=~"5.."}[1h])) / sum by (track) (rate(modelserver_requests_total[1h]))
+      - record: modelserver:p95_seconds:rate5m
+        expr: histogram_quantile(0.95, sum by (track, le) (rate(modelserver_request_duration_seconds_bucket[5m])))
+      # 99% availability SLO; fast burn = 14.4x budget over both windows.
+      - alert: ModelServerErrorBudgetFastBurn
+        expr: modelserver:error_ratio:rate5m{track="stable"} > (14.4 * 0.01) and modelserver:error_ratio:rate1h{track="stable"} > (14.4 * 0.01)
+        for: 2m
+        labels: {severity: page}
+        annotations:
+          summary: Stable model server is burning its monthly error budget about 14x too fast.
+      - alert: ModelServerLatencyHigh
+        expr: modelserver:p95_seconds:rate5m{track="stable"} > 0.25
+        for: 5m
+        labels: {severity: ticket}
+        annotations:
+          summary: Stable model server p95 latency is above 250ms.
+      - alert: CanaryUnhealthy
+        expr: modelserver:error_ratio:rate5m{track="canary"} > 0.02
+        for: 1m
+        labels: {severity: info}
+        annotations:
+          summary: Canary error ratio above 2%; the rollout controller should be rolling it back.

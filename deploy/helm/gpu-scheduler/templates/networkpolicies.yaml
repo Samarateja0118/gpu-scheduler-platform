@@ -1,0 +1,16 @@
+{{- if .Values.networkPolicies.enabled }}
+# Only the scheduler may talk to its datastores.
+{{- range $app := list "postgres" "redis" }}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ $app }}-ingress
+  labels: {{- include "gs.labels" $ | nindent 4 }}
+spec:
+  podSelector: {matchLabels: {app: {{ $app }}}}
+  policyTypes: [Ingress]
+  ingress:
+    - from: [{podSelector: {matchLabels: {app: scheduler}}}]
+{{- end }}
+{{- end }}

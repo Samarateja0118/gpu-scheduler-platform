@@ -1,0 +1,15 @@
+# Local cluster: images built with `make images`, third-party images from
+# the mirror.gcr.io Docker Hub mirror (avoids Hub rate limits).
+image:
+  registry: gpusched
+  tag: dev
+  pullPolicy: IfNotPresent
+postgres:
+  image: mirror.gcr.io/library/postgres:16-alpine
+redis:
+  image: mirror.gcr.io/library/redis:7-alpine
+monitoring:
+  prometheus:
+    image: mirror.gcr.io/prom/prometheus:v2.54.1
+  grafana:
+    image: mirror.gcr.io/grafana/grafana:11.2.2

@@ -1,0 +1,116 @@
+{{- range $track := list "stable" "canary" }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ if eq $track "stable" }}modelserver{{ else }}modelserver-canary{{ end }}
+  labels: {{- include "gs.labels" $ | nindent 4 }}
+    app: modelserver
+    track: {{ $track }}
+  {{- if eq $track "canary" }}
+  annotations:
+    # The rollout controller owns canary replicas/image after install.
+    helm.sh/resource-policy: keep
+  {{- end }}
+spec:
+  {{- if eq $track "canary" }}
+  replicas: 0
+  {{- else if not $.Values.modelserver.hpa.enabled }}
+  replicas: {{ $.Values.modelserver.replicas }}
+  {{- end }}
+  selector: {matchLabels: {app: modelserver, track: {{ $track }}}}
+  strategy:
+    rollingUpdate: {maxUnavailable: 0, maxSurge: 1}
+  template:
+    metadata:
+      labels: {app: modelserver, track: {{ $track }}}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+    spec:
+      {{- include "gs.podSecurity" $ | nindent 6 }}
+      containers:
+        - name: modelserver
+          image: {{ include "gs.image" (dict "root" $ "component" "modelserver") }}
+          imagePullPolicy: {{ $.Values.image.pullPolicy }}
+          ports: [{name: http, containerPort: 8080}]
+          env:
+            - {name: MODEL_VERSION, value: {{ $.Values.modelserver.version | quote }}}
+            - {name: MLP_LAYERS, value: {{ $.Values.modelserver.mlpLayers | quote }}}
+            - name: TRACK
+              valueFrom: {fieldRef: {fieldPath: "metadata.labels['track']"}}
+          readinessProbe:
+            httpGet: {path: /readyz, port: http}
+            periodSeconds: 3
+          resources: {{- toYaml $.Values.modelserver.resources | nindent 12 }}
+          {{- include "gs.containerSecurity" $ | nindent 10 }}
+{{- end }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: modelserver
+  labels: {{- include "gs.labels" . | nindent 4 }}
+spec:
+  # Selects both tracks: traffic splits by ready pod count.
+  selector: {app: modelserver}
+  ports: [{name: http, port: 8080, targetPort: http}]
+{{- if .Values.modelserver.hpa.enabled }}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: modelserver
+  labels: {{- include "gs.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: modelserver}
+  minReplicas: {{ .Values.modelserver.hpa.minReplicas }}
+  maxReplicas: {{ .Values.modelserver.hpa.maxReplicas }}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: {type: Utilization, averageUtilization: {{ .Values.modelserver.hpa.targetCPU }}}
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies: [{type: Pods, value: 2, periodSeconds: 15}]
+    scaleDown:
+      stabilizationWindowSeconds: 60
+      policies: [{type: Pods, value: 1, periodSeconds: 30}]
+{{- end }}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: modelserver
+  labels: {{- include "gs.labels" . | nindent 4 }}
+spec:
+  minAvailable: 1
+  selector: {matchLabels: {app: modelserver, track: stable}}
+---
+# Identity for running the rollout controller in-cluster (Job/CronJob).
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rollout
+  labels: {{- include "gs.labels" . | nindent 4 }}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: rollout
+  labels: {{- include "gs.labels" . | nindent 4 }}
+rules:
+  - apiGroups: [apps]
+    resources: [deployments]
+    resourceNames: [modelserver, modelserver-canary]
+    verbs: [get, update, patch]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rollout
+  labels: {{- include "gs.labels" . | nindent 4 }}
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: Role, name: rollout}
+subjects: [{kind: ServiceAccount, name: rollout}]
