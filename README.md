@@ -1,5 +1,7 @@
 # gpu-scheduler-platform
 
+[![ci](https://github.com/Samarateja0118/gpu-scheduler-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/Samarateja0118/gpu-scheduler-platform/actions/workflows/ci.yml)
+
 A GPU job scheduler and model-serving platform in Go on Kubernetes. A control plane packs GPU jobs onto nodes with priorities, preemption, per-tenant quotas and isolated node pools. A model server ships through a canary that rolls itself back when it breaks its SLO. Prometheus, Grafana, Helm, Terraform/OpenTofu, Ansible and GitHub Actions cover monitoring, packaging, provisioning and CI/CD.
 
 **Read this first: the GPUs are simulated.** A "node" is a goroutine in a node-agent pod that advertises 8 GPUs and "runs" a job by waiting out its runtime. The scheduling logic, API, persistence, failure handling, rollout controller and Kubernetes deployment are real and tested. Nothing touches CUDA or a device plugin. Every number below says how it was measured.
@@ -217,7 +219,7 @@ API: `POST /v1/jobs`, `GET /v1/jobs[/{id}]`, `DELETE /v1/jobs/{id}`, `POST /v1/j
 
 - Unit tests: 16 scheduler tests, including a 2,000-step randomized invariant test (no double-allocated GPU, usage matches allocations, no cross-tenant preemption of guaranteed work, no eviction of non-preemptible jobs). 6 rollout controller tests. API validation and auth tests.
 - Integration test against real Postgres 16 and Redis 7: submit, bind, preempt, complete, restart, restore, requeue on node timeout.
-- Live cluster runs were on **k3s v1.31 on one 4-vCPU VM**, not kind. kind's nested container runtime does not start in the sandbox this was built in. The CI workflow runs the same scripts on kind on GitHub-hosted runners.
+- Live cluster runs were on **k3s v1.31 on one 4-vCPU VM**, not kind. kind's nested container runtime does not start in the sandbox this was built in. The CI workflow runs the same scripts on kind (v1.31) on GitHub-hosted runners, and they pass there. In the first green run: 80/80 jobs succeeded through both failure injections, v2 was promoted, and v3-bad (18.3% errors) and v4-slow (p95 488ms) were each rolled back in 32s.
 - `tofu apply` in existing-cluster mode deployed the whole stack to k3s in 16s. The scheduler e2e script then passed against that deployment (40/40 jobs through both failure injections). The kind-creation path of the Terraform was validated, not applied, locally.
 - The Ansible playbook passes `ansible-playbook --syntax-check` and `ansible-lint` (production profile). It has not been run against a fresh host.
 - Not done: real GPUs, multi-node clusters, HA scheduler, load beyond one VM.
