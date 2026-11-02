@@ -34,7 +34,7 @@ run() {
   local code=$?
   set -e
   log "$name exit=$code $(jq -c '{promoted,rolledBack,reason,duration}' "$OUT/$name.json")"
-  [ "$code" -eq "$want" ] || { echo "unexpected exit for $name"; exit 1; }
+  [ "$code" -eq "$want" ] || { echo "unexpected exit for $name"; tail -20 "$OUT/$name.log"; exit 1; }
 }
 
 run v2-healthy 0 -set-env MODEL_VERSION=v2 -set-env FAULT_ERROR_RATE=0 -set-env FAULT_LATENCY_MS=0

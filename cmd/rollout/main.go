@@ -56,7 +56,7 @@ func main() {
 		maxP95     = flag.Float64("max-p95", 0.25, "SLO: max p95 latency (seconds)")
 		minReq     = flag.Float64("min-requests", 50, "canary requests per window needed to judge")
 		readyIn    = flag.Duration("ready-timeout", 3*time.Minute, "wait for pods to become ready")
-		kubeconfig = flag.String("kubeconfig", os.Getenv("KUBECONFIG"), "kubeconfig (in-cluster if empty)")
+		kubeconfig = flag.String("kubeconfig", "", "kubeconfig path (default: in-cluster, then $KUBECONFIG or ~/.kube/config)")
 		env        = envFlags{}
 	)
 	flag.Var(env, "set-env", "KEY=VALUE env override for the canary (repeatable)")
@@ -76,10 +76,12 @@ func main() {
 	}
 	var cfg *rest.Config
 	var err error
-	if *kubeconfig != "" {
-		cfg, err = clientcmd.BuildConfigFromFlags("", *kubeconfig)
-	} else {
-		cfg, err = rest.InClusterConfig()
+	// In a pod: in-cluster config. Otherwise -kubeconfig, $KUBECONFIG or
+	// ~/.kube/config, like kubectl.
+	if cfg, err = rest.InClusterConfig(); err != nil {
+		rules := clientcmd.NewDefaultClientConfigLoadingRules()
+		rules.ExplicitPath = *kubeconfig
+		cfg, err = clientcmd.NewNonInteractiveDeferredLoadingClientConfig(rules, &clientcmd.ConfigOverrides{}).ClientConfig()
 	}
 	if err != nil {
 		slog.Error("kube config", "err", err)
