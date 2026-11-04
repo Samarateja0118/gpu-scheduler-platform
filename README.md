@@ -6,6 +6,13 @@ A GPU job scheduler and model-serving platform in Go on Kubernetes. A control pl
 
 **Read this first: the GPUs are simulated.** A "node" is a goroutine in a node-agent pod that advertises 8 GPUs and "runs" a job by waiting out its runtime. The scheduling logic, API, persistence, failure handling, rollout controller and Kubernetes deployment are real and tested. Nothing touches CUDA or a device plugin. Every number below says how it was measured.
 
+**At a glance** (simulated GPUs; details in [Results](#results)):
+
+- Priority + preemption + quotas cut critical-job p95 queue wait from 142.8 to 2.9 minutes vs FIFO on 128 simulated GPUs, and the README shows what it costs (useful utilization 96.1% to 86.9%).
+- On a live k3s cluster, 150/150 jobs succeeded through a node-agent kill and a scheduler pod kill.
+- Canary controller rolled back a 15%-error release and a +400 ms release in 32 s each, on k3s and on kind in CI.
+- A full scheduling pass over 500 nodes with ~4,000 pending jobs dropped from 690 ms to 5 ms after caching failures by job shape.
+
 ## Architecture
 
 ```mermaid
